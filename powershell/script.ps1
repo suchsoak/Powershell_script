@@ -23,7 +23,6 @@ switch ($x) {
 # Wsl script install
 
 1{
-    
         $wsl= @"
 __      __ ___  _                        _  _ __  _   
 \ \    / // __|| |          ___ __  _ _ (_)| '_ \| |_ 
@@ -66,14 +65,19 @@ try {
     Clear-Host
     
     do{
-        Write-Host "::::::::::::::::::::::::::::::::::::::::::::"
-        Write-Host ":: [*] 1. Install Ubuntu"
-        Write-Host ":: [*] 2. Install Debian"
-        Write-Host ":: [*] 3. Install Kali Linux"
-        Write-Host ":: [*] 4. Install Archlinux"
-        Write-Host ":: [*] 5. Install Everything"
-        Write-Host ":: [*] 6. No install"
-        Write-Host "::::::::::::::::::::::::::::::::::::::::::::"
+        $install= @"
+
+        ___            _          _  _ 
+        |_ _| _ _   ___| |_  __ _ | || |
+         | | | ' \ (_-/|  _|/ _` || || |
+        |___||_||_|/__/ \__|\__/_||_||_|        
+"@
+        Write-Host $install
+        write-host 
+        Write-Host " [*] 1. Install Ubuntu        [2] Debian" -ForegroundColor Red
+        Write-Host " [*] 3. Kali Linux            [3] Arch Linux" -ForegroundColor Green
+        Write-Host " [*] 5. Install Everything    [6] No install" -ForegroundColor Blue
+        Write-Host
         $opt = Read-Host "Choose the option to install:"
 
         switch ($opt) {
@@ -158,7 +162,7 @@ catch {
 
     $fi= @"
 
-___  ___                           _  _ 
+ ___  ___                           _  _ 
 | __||_ _| _ _  ___  _ __ __  __ _ | || |
 | _|  | | | '_|/ -_) \ V  V // _` || || |
 |_|  |___||_|  \___|  \_/\_/ \__/_||_||_|
@@ -171,7 +175,6 @@ ___  ___                           _  _
 Write-Host $fi
 
 try{
-
 
     if ($true){
     &Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled True 
