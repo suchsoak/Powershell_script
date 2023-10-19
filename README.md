@@ -2,6 +2,9 @@
 
 PowerShell Script is where you have a lot of PowerShell script, to make your life easier
 
+> I have to thank the fleschutz for his scrips. He inspired me to do this project. so thank you.
+>  https://github.com/fleschutz/PowerShell/tree/master
+
 ```sh
                    ___                                             _  _ __  _   
                   | _ \ ___  _ __ __  ___  _ _        ___ __  _ _ (_)| '_ \| |_ 
