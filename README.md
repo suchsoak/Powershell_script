@@ -97,4 +97,27 @@ The documentation:
 | ------ | ------ |
 |  Browser | https://github.com/suchsoak/Powershell_script/blob/main/Doc/Browser.md 
 
+# Drive Reset
+
+```sh
+ ___        _                      ___                _   
+|   \  _ _ (_)__ __ ___  ___      | _ \ ___  ___ ___ | |_ 
+| |) || '_|| |\ V // -_)(_-/      |   // -_)(_-// -_)|  _|
+|___/ |_|  |_| \_/ \___|/__/      |_|_\\___|/__/\___| \__|
+Github: https://github.com/schsoak
+BY: ~#M?x
+
+```
+
+The drive reset will reset the computer's drives and also do a scan with the dism
+
+The documentation:
+
+| Doc |  Links |
+| ------ | ------ |
+|  Drive Reset | https://github.com/suchsoak/Powershell_script/blob/main/Doc/drivereset.md
+
+ License & Copyright
+-----------------------
+This open source project is licensed under the CC0-1.0 license. All trademarks are the property of their respective owners.
 
