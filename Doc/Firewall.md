@@ -46,3 +46,9 @@ Get-NetFirewallProfile: This command retrieves the current firewall profile sett
 In summary, the script configures the Windows firewall to block inbound traffic on ports 22, 23, and 80 by creating specific firewall rules. This can be useful for restricting access to certain services or protocols on these ports.
 
 Please note that running firewall scripts can impact network connectivity, so it's important to understand the implications before executing this type of code.
+
+| Firewall |  Links |
+| ------ | ------ |
+|  Best Practices  |https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/best-practices-configuring
+|  Create Rules |  https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/create-an-inbound-port-rule
+|  Firewall & Network |  https://support.microsoft.com/en-us/windows/firewall-network-protection-in-windows-security-aef9838b-d081-fd75-3b1b-e5fa794c003b
