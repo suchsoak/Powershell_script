@@ -37,12 +37,15 @@ If you want to know more about the scripts, inside the **powershell** folder wil
 This script will install wsl 2 on windows plus ubuntu, debian and etc...
 
 ```sh
+         ___            _          _  _ 
         |_ _| _ _   ___| |_  __ _ | || |
          | | | ' \ (_-/|  _|/ _` || || |
-        |___||_||_|/__/ \__|\__/_||_||_|        
-        [*] 1. Install Ubuntu        [2] Debian" -ForegroundColor Red
-        [*] 3. Kali Linux            [3] Arch Linux" -ForegroundColor Green
-        [*] 5. Install Everything    [6] No install" -ForegroundColor Blue
+        |___||_||_|/__/ \__|\__/_||_||_|
+       
+    [*] 1. Ubuntu                [*] 2. Debian
+    [*] 3. Kali Linux            [*] 4. Arch Linux
+    [*] 5. Opensuse              [*] 6. Oracle 
+    [*] 7. Everything            [*] 8. No install
 ```
 
 The documentation:
@@ -90,8 +93,8 @@ This script will install browsers like firefox, brave and chrome on your windows
     | | | ' \ (_-/|  _|/ _` || || |
    |___||_||_|/__/ \__|\__/_||_||_|  
 
-    [*] 1. Brave Browser  [*] 2. Firefox      
-    [*] 3. Chrome         [*] 4. All
+    [*] 1. Brave   [*] 2. Firefox   [*] 5. All
+    [*] 3. Chrome  [*] 4. Opera GX
 
 ```
 The documentation:
@@ -119,6 +122,23 @@ The documentation:
 | Doc |  Links |
 | ------ | ------ |
 |  Drive Reset | https://github.com/suchsoak/Powershell_script/blob/main/Doc/drivereset.md
+
+# Usage
+
+You can usage the script.ps1
+
+```sh
+   .\script.ps1
+```
+
+Or you can use the scripts separately
+
+```sh
+  .\wsl.ps1
+  .\firewall.ps1
+  .\browser.ps1
+  .\drivereset.ps1
+```
 
  License & Copyright
 -----------------------
