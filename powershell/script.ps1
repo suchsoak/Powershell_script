@@ -18,7 +18,7 @@ Start-Sleep -Seconds 1 > $null
 write-Host
 $opt = Read-Host "Choose the option"
 
-switch ($x) {
+switch ($opt) {
 
 # Wsl script install
 
@@ -41,10 +41,9 @@ if($true){
     write-host 
     Clear-Host
     write-host "Wsl Config"
-     dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-     dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-     wsl --set-default-version 2
-
+    dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+    dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+    wsl --set-default-version 2
     Write-Host "Wsl installed"
     Start-Sleep -Seconds 2 > $null
     Clear-Host
