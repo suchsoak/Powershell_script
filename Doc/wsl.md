@@ -51,7 +51,6 @@ If you already have the wsl, the script will go as promised
     Start-Sleep -Seconds 2 > $null
     Clear-Host
 
-
 ```
 
 # The install of linux
@@ -60,10 +59,49 @@ Depending on the option you put in, it will install linux as normal
 
 ```sh
   wsl --install -d ubuntu
-  wsl --install -d debian
-  wsl --install -d Kali 
+  wsl --install -d Debian
+  wsl --install -d kali-linux
+  wsl --install -d opensuse-leap-15.5
+  wsl --install -d oraclelinux_9_1
 ```
 
+# Opensuse and Oracle
+
+## Opensuse Linux
+
+For opensuse wsl the following are available
+
+```sh
+opensuse-leap-15.5
+openSUSE-Tumbleweed
+```
+On the script
+
+```sh
+wsl --install -d opensuse-leap-15.5 
+```
+You can change
+
+```sh
+wsl --install -d opensuse-leap-<version>
+```
+
+## Oracle Linux
+
+```sh
+OracleLinux_7_9
+OracleLinux_8_7
+OracleLinux_9_1
+```
+On the script
+
+```sh
+   wsl --install -d oraclelinux_9_1
+```
+You Can Change
+```sh
+   wsl --install -d oraclelinux_<version>
+```
 # Arch wsl install 
 
 For arch linux the process is a bit more complex, it requires you to have git, if you are not going to download manually using a zip file.
@@ -83,11 +121,10 @@ For arch linux the process is a bit more complex, it requires you to have git, i
               }
 ```
 
-It will install ubuntu on the wsl
-
 | Wsl |  Links |
 | ------ | ------ |
 |  Wsl   | https://learn.microsoft.com/en-us/windows/wsl/install
+|  Wsl Commands | https://github.com/MicrosoftDocs/WSL/blob/main/WSL/basic-commands.md
 |  Ubuntu  |  https://ubuntu.com/wsl
 |  Debian   | https://wiki.debian.org/InstallingDebianOn/Microsoft/Windows/SubsystemForLinux
 |  Kali Linux | https://www.kali.org/docs/wsl/wsl-preparations/
