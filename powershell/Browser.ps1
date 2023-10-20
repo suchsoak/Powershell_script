@@ -1,4 +1,4 @@
-bs = @"
+$bs = @"
 ___                                  
 | _ ) _ _  ___  _ __ __  ___ ___  _ _ 
 | _ \| '_|/ _ \ \ V  V /(_-// -_)| '_|
@@ -7,9 +7,13 @@ Github: https://github.com/schsoak
 BY: ~#M?x
 
 "@
+
+Write-Host $bs
+
 Start-Sleep 3 > $null
 
 try {
+    
     Clear-Host
 
     $install= @"
@@ -23,6 +27,8 @@ try {
     [*] 3. Chrome         [*] 4. All
              
 "@
+
+Write-Host $install
 
 $opt = Read-Host "Choose the option to install:"
 
@@ -117,10 +123,7 @@ if($True){
     Default {}
 }
 
-    exit 0
 }
 catch {
-    
-    exit 1
-    
+    Write-Host "Error"    
 }
