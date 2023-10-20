@@ -118,7 +118,20 @@ After open the zip file you will need extract and run
 
 > [!NOTE]
 > You can use the wget or iwr for install too: wget https://github.com/yuk7/ArchWSL/releases/download/22.10.16.0/Arch.zip
-> Bat don't forget, you will need save in the zip file.
+> 
+> But don't forget, you'll need to save it to the zip file.
+<p align="center">
+  <img src="https://github.com/suchsoak/Powershell_script/blob/main/Doc/images/zip.png" alt="zip1.png">
+</p>
+<p align="center">
+  <img src="https://github.com/suchsoak/Powershell_script/blob/main/Doc/images/zip2.png" alt="zip2.png">
+</p>
+<p align="center">
+  <img src="https://github.com/suchsoak/Powershell_script/blob/main/Doc/images/zip3.png" alt="zip3.png">
+</p>
+ 
+> [!NOTE]
+> If you were unable to download it, see the official documentation: https://wsldl-pg.github.io/ArchW-docs/
 
 | Commands |  Links |
 | ------ | ------ |
