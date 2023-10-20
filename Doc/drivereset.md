@@ -10,7 +10,7 @@ BY: ~#M?x
 ```sh
   dism /online /cleanup-image /scanhealth
   dism /online /cleanup-image /restorehealth
-  pnputil /resetdrivers /force
+  pnputil /scan-devices 
 ```
 
 When you run the commands **"dism /online /cleanup-image /scanhealth"** and **"dism /online /cleanup-image /restorehealth"** in Windows, you are using the DISM (Deployment Image Servicing and Management) tool to check and repair the integrity of the operating system image.
