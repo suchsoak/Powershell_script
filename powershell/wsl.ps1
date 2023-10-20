@@ -70,21 +70,17 @@ if($true){
              break
               }
               4 {Write-Host "Archlinux" -ForegroundColor Blue
-              if($false){
-                git clone https://github.com/yuk7/ArchWSL.git
-
-              }else {
-                Write-Host
-                Write-Host "Git Install" .ForegroundColor Yellow
-                winget install --id=Git.Git  -e
+              if($true){
+                Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+                DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
                 Clear-Host
                 Write-Host
-                Write-Host "Arch Linux"
+                curl -O arch.zip https://github.com/yuk7/ArchWSL/releases/download/22.10.16.0/Arch.zip
+                .\arch.zip
+
+              }else{
 
               }
-              Write-Host "Arch linux Installed"
-              Write-Host
-              break
                }
                5 {Write-Host "Opensuse"
                wsl --install -d opensuse-leap-15.5 
