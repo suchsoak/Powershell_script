@@ -104,24 +104,28 @@ You Can Change
 ```
 # Arch wsl install 
 
-For arch linux the process is a bit more complex, we will need wget or iwr, if you are not going to download manually using a zip file.
+For arch linux the process is a bit more complex, we will need curl with -O for save the link in the file. If you are not going to download manually you can just download the zip file.
 
 ```sh
-                Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
-                DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
-                Clear-Host
-                Write-Host
-                iwr https://github.com/yuk7/ArchWSL/releases/download/22.10.16.0/Arch.zip
+   Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+   DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
+   Clear-Host
+   Write-Host
+   curl -O arch.zip https://github.com/yuk7/ArchWSL/releases/download/22.10.16.0/Arch.zip
+   ./arch.zip
 ```
-You can use iwr or wget for install with url
 
 > [!NOTE]
-> You can use the wget for install to: wget https://github.com/yuk7/ArchWSL/releases/download/22.10.16.0/Arch.zip
+> You can use the wget or iwr for install too: wget https://github.com/yuk7/ArchWSL/releases/download/22.10.16.0/Arch.zip
+> Bat don't forget, you will need save in the zip file.
 
-| Wsl |  Links |
+| Commands |  Links |
 | ------ | ------ |
 |  Wsl   | https://learn.microsoft.com/en-us/windows/wsl/install
 |  Wsl Commands | https://github.com/MicrosoftDocs/WSL/blob/main/WSL/basic-commands.md
+|  Curl | https://curl.se/windows/
+|  Wget | https://eternallybored.org/misc/wget/
+|  Winget | https://learn.microsoft.com/en-us/windows/package-manager/winget/
 |  Ubuntu  |  https://ubuntu.com/wsl
 |  Debian   | https://wiki.debian.org/InstallingDebianOn/Microsoft/Windows/SubsystemForLinux
 |  Kali Linux | https://www.kali.org/docs/wsl/wsl-preparations/
