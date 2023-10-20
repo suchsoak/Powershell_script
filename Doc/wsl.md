@@ -104,22 +104,19 @@ You Can Change
 ```
 # Arch wsl install 
 
-For arch linux the process is a bit more complex, it requires you to have git, if you are not going to download manually using a zip file.
+For arch linux the process is a bit more complex, we will need wget or iwr, if you are not going to download manually using a zip file.
 
 ```sh
-
- if($false){
-                git clone https://github.com/yuk7/ArchWSL.git
-
-              }else {
-                Write-Host "Git Install"
-                Invoke-WebRequest -Uri "https://git-scm.com/download/win" -OutFile "$env:USERPROFILE\Downloads\GitInstaller.exe"
-                Start-Process -Wait -FilePath "$env:USERPROFILE\Downloads\GitInstaller.exe"
-                git clone https://github.com/yuk7/ArchWSL.git
-                cd ./ArchWSL.git
-                tar -xf Arch.tar.gz
-              }
+                Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+                DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
+                Clear-Host
+                Write-Host
+                iwr https://github.com/yuk7/ArchWSL/releases/download/22.10.16.0/Arch.zip
 ```
+You can use iwr or wget for install with url
+
+> [!NOTE]
+> You can use the wget for install to: wget https://github.com/yuk7/ArchWSL/releases/download/22.10.16.0/Arch.zip
 
 | Wsl |  Links |
 | ------ | ------ |
