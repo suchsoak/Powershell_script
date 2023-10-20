@@ -112,8 +112,9 @@ For arch linux the process is a bit more complex, we will need curl with -O for 
    Clear-Host
    Write-Host
    curl -O arch.zip https://github.com/yuk7/ArchWSL/releases/download/22.10.16.0/Arch.zip
-   ./arch.zip
+   .\arch.zip
 ```
+After open the zip file you will need extract and run
 
 > [!NOTE]
 > You can use the wget or iwr for install too: wget https://github.com/yuk7/ArchWSL/releases/download/22.10.16.0/Arch.zip
