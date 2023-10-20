@@ -1,3 +1,4 @@
+Clear-Host
 $wsl= @"
 __      __ ___  _                        _  _ __  _   
 \ \    / // __|| |          ___ __  _ _ (_)| '_ \| |_ 
@@ -10,51 +11,46 @@ __      __ ___  _                        _  _ __  _
 Write-Host $wsl
 Start-Sleep -Seconds 2 > $null
 
-try {
-
-    if($false) {
-
-        wsl --install
-    }else {
-    write-host 
-    write-host "Wsl Config"
-    & dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-    & dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-    & wsl --install
-    & wsl --set-default-version 2
-        
-    }
-    
-    if($true){
+if($true){
     Write-Host "Wsl install"
     wsl --install
     write-host 
     Clear-Host
-    write-host "Wsl Config"
-    & dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-    & dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-    & wsl --set-default-version 2
-
+    Write-host "Windows Subsystem for linux"
+    dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+    Write-Host
+    Write-Host "Virtual Machine platform"
+    dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+    wsl --set-default-version 2
     Write-Host "Wsl installed"
     Start-Sleep -Seconds 2 > $null
     Clear-Host
     
     do{
-        Write-Host "::::::::::::::::::::::::::::::::::::::::::::"
-        Write-Host ":: [*] 1. Install Ubuntu"
-        Write-Host ":: [*] 2. Install Debian"
-        Write-Host ":: [*] 3. Install Kali Linux"
-        Write-Host ":: [*] 4. Install Archlinux"
-        Write-Host ":: [*] 5. Install Everything"
-        Write-Host ":: [*] 6. No install"
-        Write-Host "::::::::::::::::::::::::::::::::::::::::::::"
-        $opt = Read-Host "Choose the option to install:"
+
+        $install= @"
+
+         ___            _          _  _ 
+        |_ _| _ _   ___| |_  __ _ | || |
+         | | | ' \ (_-/|  _|/ _` || || |
+        |___||_||_|/__/ \__|\__/_||_||_|        
+"@
+        Write-Host $install
+        write-host 
+        Write-Host " [*] 1. Ubuntu                [*] 2. Debian" -ForegroundColor Red
+        Write-Host " [*] 3. Kali Linux            [*] 4. Arch Linux " -ForegroundColor Blue
+        Write-Host " [*] 5. Opensuse              [*] 6. Oracle " -ForegroundColor Magenta
+        Write-Host " [*] 7. Everything            [*] 8. No install    " -ForegroundColor Green
+        Write-Host
+        $opt = Read-Host "Choose the option to install"
 
         switch ($opt) {
             1 {
+                Write-Host
                 Write-Host "Ubuntu"
                 wsl --install -d Ubuntu
-                Write-Host "Ubuntu Installed"
+                Write-Host
+                Write-Host "Ubuntu Installed" -ForegroundColor Yellow
                 write-host 
                 Start-Sleep -Seconds 2 > $null
                 break
@@ -62,44 +58,65 @@ try {
 
             2 {Write-Host "Debian"
             wsl --install -d Debian
-            Write-Host "Debian Installed"
+            Write-Host
+            Write-Host "Debian Installed" -ForegroundColor Red
             Write-Host
             break
              }
              3 {Write-Host "Kali"
-             wsl --install -d Kali 
-             Write-Host "Kali Linux Installed"
+             wsl --install -d kali-linux 
+             Write-Host "Kali Linux Installed" -ForegroundColor Blue
              Write-Host
              break
               }
-              4 {Write-Host "Archlinux"
+              4 {Write-Host "Archlinux" -ForegroundColor Blue
               if($false){
                 git clone https://github.com/yuk7/ArchWSL.git
 
               }else {
-                Write-Host "Git Install"
-                Invoke-WebRequest -Uri "https://git-scm.com/download/win" -OutFile "$env:USERPROFILE\Downloads\GitInstaller.exe"
-                Start-Process -Wait -FilePath "$env:USERPROFILE\Downloads\GitInstaller.exe"
-                git clone https://github.com/yuk7/ArchWSL.git
-                cd ./ArchWSL.git
-                tar -xf Arch.tar.gz
+                Write-Host
+                Write-Host "Git Install" .ForegroundColor Yellow
+                winget install --id=Git.Git  -e
+                Clear-Host
+                Write-Host
+                Write-Host "Arch Linux"
+
               }
               Write-Host "Arch linux Installed"
               Write-Host
               break
                }
-               5 {Write-Host "Everything"
-               wsl --install -d ubuntu
-               wsl --install -d Debian
-               wsl --install -d Kali
-               wsl --install -d ubuntu
-
-               Write-Host "Kali Linux Installed"
+               5 {Write-Host "Opensuse"
+               wsl --install -d opensuse-leap-15.5 
+               Write-Host
+               Write-Host "OpenSuse Installed" -ForegroundColor Green
                Write-Host
                break
                 }
-            6 {
-                Write-Host "Exite"
+                6 {Write-Host "Oracle"
+                wsl --install -d oraclelinux_9_1
+                Write-Host
+                Write-Host "Oracle Installed" -ForegroundColor Green
+                Write-Host
+                break
+                 }
+               7 {
+                write-host 
+                Write-Host "Everything"
+               wsl --install -d ubuntu
+               wsl --install -d Debian
+               wsl --install -d kali-linux
+               wsl --install -d opensuse-leap-15.5
+               wsl --install -d oraclelinux_9_1
+                Write-Host
+                Start-Sleep 2 > $null
+                Clear-Host
+               Write-Host "Everything Installed" -ForegroundColor Blue
+               Write-Host
+               break
+                }
+            8 {
+                Write-Host "Exit"
                 Start-Sleep -Seconds 1 > $null
                 exit
                 break
@@ -109,19 +126,11 @@ try {
             }
         }
     } while ($opt -ne "6")
-
-
     }
 
     else {
-        & dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-        & dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-        & wsl --set-default-version 2
-
+        
+         dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+         dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+         wsl --set-default-version 2
     }
-
-
-}
-catch {
-    Write-Error "Error "
-}
