@@ -176,7 +176,7 @@ if ($true){
 
 3{
 
-bs = @"
+$bs = @"
 ___                                  
 | _ ) _ _  ___  _ __ __  ___ ___  _ _ 
 | _ \| '_|/ _ \ \ V  V /(_-// -_)| '_|
@@ -185,6 +185,7 @@ Github: https://github.com/schsoak
 BY: ~#M?x
 
 "@
+Write-Host $bs
 Start-Sleep 3 > $null
 
 try {
@@ -201,13 +202,13 @@ try {
     [*] 3. Chrome         [*] 4. All
              
 "@
-
+Write-Host $install
 $opt = Read-Host "Choose the option to install:"
 
 
 switch ($opt) {
     1{
-        brave = @"
+        $brave = @"
 
          ___                      
         | _ ) _ _  __ _ __ __ ___ 
@@ -215,7 +216,8 @@ switch ($opt) {
         |___/|_|  \__/_| \_/ \___|        
 
 
-"@
+"@   
+    Write-Host $brave
     if($true){
     winget install --id=Brave.Brave  -e
     Write-Host
@@ -226,7 +228,7 @@ switch ($opt) {
         Write-Host "Warning"
     }}
     2{
-    Firefox = @"
+    $Firefox = @"
 
      ___  _             __           
     | __|(_) _ _  ___  / _| ___ __ __
@@ -234,7 +236,7 @@ switch ($opt) {
     |_|  |_||_|  \___||_|  \___//_\_\
 
 "@
-
+    Write-Host $Firefox
     if($true){
     winget install --id=Mozilla.Firefox  -e
     }else {
@@ -242,13 +244,14 @@ switch ($opt) {
     }
     }
     3{
-    chrom = @"
+    $chrom = @"
     ___  _                          
     / __|| |_   _ _  ___  _ __   ___ 
    | (__ |   \ | '_|/ _ \| '  \ / -_)
     \___||_||_||_|  \___/|_|_|_|\___|
 
 "@
+    $chrom
     if($True){
         winget install --id=Google.Chrome  -e
         Write-Host
@@ -260,7 +263,7 @@ switch ($opt) {
     }
     4{
 
-all = @"
+$all = @"
      ___                                  
     | _ ) _ _  ___  _ __ __  ___ ___  _ _ 
     | _ \| '_|/ _ \ \ V  V /(_-// -_)| '_|
@@ -269,6 +272,7 @@ all = @"
     BY: ~#M?x
 
 "@
+Write-Host $all
 
 if($True){
     Write-Host "Brave"
@@ -306,7 +310,7 @@ catch {
 }
 
 4{
-    drives = @"
+    $drives = @"
      ___        _                      ___                _   
     |   \  _ _ (_)__ __ ___  ___      | _ \ ___  ___ ___ | |_ 
     | |) || '_|| |\ V // -_)(_-/      |   // -_)(_-// -_)|  _|
@@ -315,7 +319,7 @@ catch {
     BY: ~#M?x   
 
 "@
-
+    Write-Host $drives
 try {
 
     if($true){
