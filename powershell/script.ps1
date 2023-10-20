@@ -23,6 +23,7 @@ switch ($opt) {
 # Wsl script install
 
 1{
+Clear-Host
 $wsl= @"
 __      __ ___  _                        _  _ __  _   
 \ \    / // __|| |          ___ __  _ _ (_)| '_ \| |_ 
@@ -49,6 +50,7 @@ if($true){
     Clear-Host
     
     do{
+
         $install= @"
 
          ___            _          _  _ 
@@ -58,17 +60,19 @@ if($true){
 "@
         Write-Host $install
         write-host 
-        Write-Host " [*] 1. Install Ubuntu        [2] Debian" -ForegroundColor Red
-        Write-Host " [*] 3. Kali Linux            [3] Arch Linux" -ForegroundColor Green
+        Write-Host " [*] 1. Install Ubuntu        [*] 2. Debian" -ForegroundColor Red
+        Write-Host " [*] 3. Kali Linux            [*] 4. Arch Linux" -ForegroundColor Green
         Write-Host " [*] 5. Install Everything    [6] No install" -ForegroundColor Blue
         Write-Host
-        $opt = Read-Host "Choose the option to install:"
+        $opt = Read-Host "Choose the option to install"
 
         switch ($opt) {
             1 {
+                Write-Host
                 Write-Host "Ubuntu"
                 wsl --install -d Ubuntu
-                Write-Host "Ubuntu Installed"
+                Write-Host
+                Write-Host "Ubuntu Installed" -ForegroundColor Yellow
                 write-host 
                 Start-Sleep -Seconds 2 > $null
                 break
@@ -76,44 +80,42 @@ if($true){
 
             2 {Write-Host "Debian"
             wsl --install -d Debian
-            Write-Host "Debian Installed"
+            Write-Host
+            Write-Host "Debian Installed" -ForegroundColor Red
             Write-Host
             break
              }
              3 {Write-Host "Kali"
              wsl --install -d Kali 
-             Write-Host "Kali Linux Installed"
+             Write-Host "Kali Linux Installed" -ForegroundColor Blue
              Write-Host
              break
               }
-              4 {Write-Host "Archlinux"
+              4 {Write-Host "Archlinux" -ForegroundColor Blue
               if($false){
                 git clone https://github.com/yuk7/ArchWSL.git
 
               }else {
                 Write-Host "Git Install"
-                Invoke-WebRequest -Uri "https://git-scm.com/download/win" -OutFile "$env:USERPROFILE\Downloads\GitInstaller.exe"
-                Start-Process -Wait -FilePath "$env:USERPROFILE\Downloads\GitInstaller.exe"
-                git clone https://github.com/yuk7/ArchWSL.git
-                cd ./ArchWSL.git
-                tar -xf Arch.tar.gz
+                winget 
               }
               Write-Host "Arch linux Installed"
               Write-Host
               break
                }
-               5 {Write-Host "Everything"
+               5 {
+                write-host 
+                Write-Host "Everything"
                wsl --install -d ubuntu
                wsl --install -d Debian
                wsl --install -d Kali
-               wsl --install -d ubuntu
-
-               Write-Host "Kali Linux Installed"
+                Write-Host
+               Write-Host "Everything Installed" -ForegroundColor Blue
                Write-Host
                break
                 }
             6 {
-                Write-Host "Exite"
+                Write-Host "Exit"
                 Start-Sleep -Seconds 1 > $null
                 exit
                 break
@@ -151,7 +153,6 @@ if($true){
 
 Write-Host $fi
 
-
 if ($true){
     Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled True 
     Write-Host " [*] Block 22"
@@ -159,12 +160,11 @@ if ($true){
     New-NetFirewallRule -DisplayName "'Block 22'" -Direction Inbound -Protocol TCP -LocalPort 22 -Action Block
     Write-Host
     Write-Host " [*] Block 23"
+    Write-Host
     New-NetFirewallRule -DisplayName "'Block 23'" -Direction Inbound -Protocol TCP -LocalPort 23 -Action Block
     Write-Host " [*] Block 80"
     write-host 
     New-NetFirewallRule -DisplayName "'Block 80'" -Direction Inbound -Protocol TCP -LocalPort 80 -Action Block
-    Get-NetFirewallProfil
-
     }else {
         Write-Host "Haven Problem"
         write-host "Don't forget by Administrator"
@@ -202,11 +202,12 @@ try {
              
 "@
 Write-Host $install
-$opt = Read-Host "Choose the option to install:"
+$opt = Read-Host "Choose the option to install"
 
 
 switch ($opt) {
     1{
+        Clear-Host
         $brave = @"
 
          ___                      
@@ -216,7 +217,7 @@ switch ($opt) {
 
 
 "@   
-    Write-Host $brave
+    Write-Host $brave -ForegroundColor Red
     if($true){
     winget install --id=Brave.Brave  -e
     Write-Host
@@ -227,6 +228,7 @@ switch ($opt) {
         Write-Host "Warning"
     }}
     2{
+    Clear-Host
     $Firefox = @"
 
      ___  _             __           
@@ -235,7 +237,7 @@ switch ($opt) {
     |_|  |_||_|  \___||_|  \___//_\_\
 
 "@
-    Write-Host $Firefox
+    Write-Host $Firefox -ForegroundColor Red
     if($true){
     winget install --id=Mozilla.Firefox  -e
     }else {
@@ -250,7 +252,7 @@ switch ($opt) {
     \___||_||_||_|  \___/|_|_|_|\___|
 
 "@
-    $chrom
+    Write-Host $chrom
     if($True){
         winget install --id=Google.Chrome  -e
         Write-Host
@@ -273,16 +275,18 @@ $all = @"
 "@
 Write-Host $all
 
-if($True){
-    Write-Host "Brave"
+if($False){
+    Write-Host
+    Write-Host "Brave" -ForegroundColor Red
+    Write-Host
     Start-Sleep 2 > $null
     winget install --id=BraveSoftware.BraveBrowser -e
     Clear-Host
-    Write-Host "Firefox"
+    Write-Host "Firefox"  -ForegroundColor Yellow
     Start-Sleep 2 > $null
     winget install --id=Mozilla.Firefox -e
     Clear-Host
-    Write-Host "Chrome"
+    Write-Host "Chrome" ForegroundColor White
     Start-Sleep 2 > $null
     winget install --id=Google.Chrome -e
     Clear-Host
@@ -298,17 +302,16 @@ if($True){
     Default {}
 }
 
-    exit 0
 }
 catch {
     
-    exit 1
-    
+        Write-Host "Have Problems"    
 }
 
 }
 
 4{
+    Clear-Host
     $drives = @"
      ___        _                      ___                _   
     |   \  _ _ (_)__ __ ___  ___      | _ \ ___  ___ ___ | |_ 
