@@ -9,8 +9,8 @@ $tx= @"
             v:1.0.0
             BY: ~#M?x
 
-            [1] Wsl             [2] Firewall_rules
-            [3] Browser_Install [4] Drive Reset
+            [1] Wsl             [2] Firewall rules
+            [3] Browser Install [4] Drive Reset
 "@
 
 Write-Host $tx
@@ -41,8 +41,10 @@ if($true){
     wsl --install
     write-host 
     Clear-Host
-    write-host "Wsl Config"
+    Write-host "Windows Subsystem for linux"
     dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+    Write-Host
+    Write-Host "Virtual Machine platform"
     dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
     wsl --set-default-version 2
     Write-Host "Wsl installed"
@@ -60,9 +62,10 @@ if($true){
 "@
         Write-Host $install
         write-host 
-        Write-Host " [*] 1. Install Ubuntu        [*] 2. Debian" -ForegroundColor Red
-        Write-Host " [*] 3. Kali Linux            [*] 4. Arch Linux" -ForegroundColor Green
-        Write-Host " [*] 5. Install Everything    [6] No install" -ForegroundColor Blue
+        Write-Host " [*] 1. Ubuntu                [*] 2. Debian" -ForegroundColor Red
+        Write-Host " [*] 3. Kali Linux            [*] 4. Arch Linux " -ForegroundColor Blue
+        Write-Host " [*] 5. Opensuse              [*] 6. Oracle " -ForegroundColor Magenta
+        Write-Host " [*] 7. Everything            [*] 8. No install    " -ForegroundColor Green
         Write-Host
         $opt = Read-Host "Choose the option to install"
 
@@ -86,35 +89,54 @@ if($true){
             break
              }
              3 {Write-Host "Kali"
-             wsl --install -d Kali 
+             wsl --install -d kali-linux 
              Write-Host "Kali Linux Installed" -ForegroundColor Blue
              Write-Host
              break
               }
               4 {Write-Host "Archlinux" -ForegroundColor Blue
-              if($false){
-                git clone https://github.com/yuk7/ArchWSL.git
+              if($true){
+                Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+                DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
+                Clear-Host
+                Write-Host
+                curl -O arch.zip https://github.com/yuk7/ArchWSL/releases/download/22.10.16.0/Arch.zip
+                .\arch.zip
 
-              }else {
-                Write-Host "Git Install"
-                winget 
+              }else{
+
               }
-              Write-Host "Arch linux Installed"
-              Write-Host
-              break
                }
-               5 {
+               5 {Write-Host "Opensuse"
+               wsl --install -d opensuse-leap-15.5 
+               Write-Host
+               Write-Host "OpenSuse Installed" -ForegroundColor Green
+               Write-Host
+               break
+                }
+                6 {Write-Host "Oracle"
+                wsl --install -d oraclelinux_9_1
+                Write-Host
+                Write-Host "Oracle Installed" -ForegroundColor Green
+                Write-Host
+                break
+                 }
+               7 {
                 write-host 
                 Write-Host "Everything"
                wsl --install -d ubuntu
                wsl --install -d Debian
-               wsl --install -d Kali
+               wsl --install -d kali-linux
+               wsl --install -d opensuse-leap-15.5
+               wsl --install -d oraclelinux_9_1
                 Write-Host
+                Start-Sleep 2 > $null
+                Clear-Host
                Write-Host "Everything Installed" -ForegroundColor Blue
                Write-Host
                break
                 }
-            6 {
+            8 {
                 Write-Host "Exit"
                 Start-Sleep -Seconds 1 > $null
                 exit
@@ -197,8 +219,8 @@ try {
     | | | ' \ (_-/|  _|/ _` || || |
    |___||_||_|/__/ \__|\__/_||_||_|  
 
-    [*] 1. Brave Browser  [*] 2. Firefox      
-    [*] 3. Chrome         [*] 4. All
+    [*] 1. Brave   [*] 2. Firefox   [*] 5. All
+    [*] 3. Chrome  [*] 4. Opera GX
              
 "@
 Write-Host $install
@@ -263,6 +285,24 @@ switch ($opt) {
 
     }
     4{
+        $opreagx = @"
+        ___   ___  ___  ___  ___         ___ __  __
+        / _ \ | _ \| __|| _ \/   \       / __|\ \/ /
+       | (_) ||  _/| _| |   /| - |      | (_ | >  < 
+        \___/ |_|  |___||_|_\|_|_|       \___|/_/\_\       
+    
+"@
+        Write-Host $opreagx
+        if($True){
+            winget install --id=Google.Chrome  -e
+            Write-Host
+            Write-Host "Opera GX Installed"
+        }else {
+            Write-Host "Have Problems"
+        }
+    
+        }
+    5{
 
 $all = @"
      ___                                  
@@ -286,10 +326,15 @@ if($False){
     Start-Sleep 2 > $null
     winget install --id=Mozilla.Firefox -e
     Clear-Host
-    Write-Host "Chrome" ForegroundColor White
+    Write-Host "Chrome" -ForegroundColor White
     Start-Sleep 2 > $null
     winget install --id=Google.Chrome -e
     Clear-Host
+    Write-Host
+    write-host "Opera GX" -ForegroundColor Red
+    Write-Host
+    Start-Sleep 2 > $null
+    winget install --id=Opera.OperaGX  -e
     Write-Host
     Write-Host "All browsers installed"
     }else {
@@ -328,22 +373,26 @@ try {
         Write-Host "Drive Reset"
         dism /online /cleanup-image /scanhealth
         dism /online /cleanup-image /restorehealth
+        Write-Host "Drive Scanner" -ForegroundColor Magenta
+        Write-Host
+        pnputil /scan-devices 
+        Write-Host
+        Write-Host "Restart all devices"
         pnputil /resetdrivers /force
         Write-Host
-        Write-Host "Drives Reset done!"
+        Write-Host "Drives Reset done!" -ForegroundColor Cyan
         Write-Host 
-        Write-Host "Now reboot your computer"
-
+        Write-Host "Now reboot your computer" -ForegroundColor Cyan
     }else{
         Write-Host
-        Write-Host "Haven Problem"
+        Write-Host " ⚠ Haven Problem ⚠ "
         Write-Host
     }
     
 }
 catch {
     <#Do this if a terminating exception happens#>
-    Write-Host "Haven Problem, maybe you dont start with administrator"
+    Write-Host " ⚠ Haven Problem, maybe you dont start with administrator ⚠ "
 }
     
 }}
