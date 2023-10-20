@@ -19,18 +19,16 @@ You will chose between
     | | | ' \ (_-/|  _|/ _` || || |
    |___||_||_|/__/ \__|\__/_||_||_|  
 
-    [*] 1. Brave Browser        
-    [*] 2. Firefox            
-    [*] 3. Chrome    
-    [*] 4. All 
+    [*] 1. Brave   [*] 2. Firefox   [*] 5. All
+    [*] 3. Chrome  [*] 4. Opera GX
 
 ```
 
 # Brave Browser
 
 ```sh
-    1{
-        brave = @"
+        Clear-Host
+        $brave = @"
 
          ___                      
         | _ ) _ _  __ _ __ __ ___ 
@@ -38,16 +36,12 @@ You will chose between
         |___/|_|  \__/_| \_/ \___|        
 
 
-"@
+"@   
+    Write-Host $brave -ForegroundColor Red
     if($true){
-    winget install BraveSoftware.BraveBrowser
+    winget install --id=Brave.Brave  -e
     Write-Host
     Write-Host "Brave Installed"
-
-
-    }else{
-        Write-Host "Warning"
-    }}
 ```
 
 Install with winget
@@ -59,7 +53,8 @@ winget install BraveSoftware.BraveBrowser
 # Firefox
 
 ```sh
-    Firefox = @"
+Clear-Host
+    $Firefox = @"
 
      ___  _             __           
     | __|(_) _ _  ___  / _| ___ __ __
@@ -67,14 +62,11 @@ winget install BraveSoftware.BraveBrowser
     |_|  |_||_|  \___||_|  \___//_\_\
 
 "@
-
+    Write-Host $Firefox -ForegroundColor Red
     if($true){
-        winget install Mozilla.Firefox
-    }else {
-        Write-Host "Have Problems"
-    }
-    }
+    winget install --id=Mozilla.Firefox  -e
 ```
+
 Install With winget
 
 ```sh
@@ -84,25 +76,18 @@ Install With winget
 # Chrome 
 
 ```sh
-
-    3{
-    chrom = @"
+ $chrom = @"
     ___  _                          
     / __|| |_   _ _  ___  _ __   ___ 
    | (__ |   \ | '_|/ _ \| '  \ / -_)
     \___||_||_||_|  \___/|_|_|_|\___|
 
 "@
+    Write-Host $chrom
     if($True){
         winget install --id=Google.Chrome  -e
         Write-Host
         Write-Host "Chrome Installed"
-    }else {
-        Write-Host "Have Problems"
-    }
-
-    }
-
 ```
 For install the chrome is like the others
 
@@ -110,36 +95,62 @@ For install the chrome is like the others
     winget install --id=Google.Chrome  -e
 ```
 
-# All
-
-In all, it will install all 3 browser (Brave, FIrefox and chrome)
+# Opera GX
 
 ```sh
-
-if($True){
-            Write-Host "Brave"
-            Start-Sleep 2 > $null
-            winget install --id=Brave.Brave  -e
-            Clear-Host
-            Write-Host "Firefox"
-            Start-Sleep 2 > $null
-            winget install --id=Mozilla.Firefox  -e
-            clear-host
-            Write-Host "Chrome"
-            Start-Sleep 2 > $null
+  4{
+        $opreagx = @"
+        ___   ___  ___  ___  ___         ___ __  __
+        / _ \ | _ \| __|| _ \/   \       / __|\ \/ /
+       | (_) ||  _/| _| |   /| - |      | (_ | >  < 
+        \___/ |_|  |___||_|_\|_|_|       \___|/_/\_\       
+    
+"@
+        Write-Host $opreagx
+        if($True){
             winget install --id=Google.Chrome  -e
-            Clear-Host
             Write-Host
-            Write-Host "All browsers installed"
-    }else {
-            Write-Host
+            Write-Host "Opera GX Installed"
+        }else {
             Write-Host "Have Problems"
         }
+    
+        }
+```
+For install the Opera GX is like the others
 
-    }
-
+```sh
+    winget install --id=Google.Chrome  -e
 ```
 
+# All
+
+In all, it will install all browser
+
+```sh
+    Write-Host
+    Write-Host "Brave" -ForegroundColor Red
+    Write-Host
+    Start-Sleep 2 > $null
+    winget install --id=BraveSoftware.BraveBrowser -e
+    Clear-Host
+    Write-Host "Firefox"  -ForegroundColor Yellow
+    Start-Sleep 2 > $null
+    winget install --id=Mozilla.Firefox -e
+    Clear-Host
+    Write-Host "Chrome" -ForegroundColor White
+    Start-Sleep 2 > $null
+    winget install --id=Google.Chrome -e
+    Clear-Host
+    Write-Host
+    write-host "Opera GX" -ForegroundColor Red
+    Write-Host
+    Start-Sleep 2 > $null
+    winget install --id=Opera.OperaGX  -e
+    Write-Host
+    Write-Host "All browsers installed"
+
+```
 
 | Libraries and browsers |  Links |
 | ------ | ------ |
@@ -147,5 +158,7 @@ if($True){
 |  Brave |  https://brave.com/  |
 |  Firefox | https://www.mozilla.org/en-US/firefox/new/    |
 |  Chrome  | https://www.google.com/chrome/       |
+|  Chrome  | https://www.google.com/chrome/       |
+| Opera GX | https://www.opera.com/gx |
 
 
