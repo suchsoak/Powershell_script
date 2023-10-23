@@ -450,6 +450,7 @@ BY: ~#M?x
 Write-Host $hd
 
 if ($true){
+    Clear-Host
     Write-Host "[*] Sfc /ScanNow 1/4"
     Start-Sleep 2 > $null
     Sfc /ScanNow
