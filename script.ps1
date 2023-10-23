@@ -1,5 +1,5 @@
 Clear-Host
-$tx= @"
+$ps= @"
  ___                                             _  _ __  _   
 | _ \ ___  _ __ __  ___  _ _        ___ __  _ _ (_)| '_ \| |_ 
 |  _// _ \ \ V  V // -_)| '_|      (_-// _|| '_|| || .__/|  _|
@@ -12,7 +12,7 @@ $tx= @"
     [3] Browser Install [4] Drive Reset    [6] Disk Verification 
 "@
 
-Write-Host $tx
+Write-Host $ps
 Start-Sleep -Seconds 1 > $null
 write-Host
 $opt = Read-Host "Choose the option"
