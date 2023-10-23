@@ -203,7 +203,7 @@ ___
 |___/|_|  \___/  \_/\_/ /__/\___||_|  
 Github: https://github.com/schsoak
 BY: ~#M?x
-[❤] Buy Me A Coffee: https://www.buymeacoffee.com/m100047r
+[!] Buy Me A Coffee: https://www.buymeacoffee.com/m100047r
 "@
 Write-Host $bs
 Start-Sleep 3 > $null
