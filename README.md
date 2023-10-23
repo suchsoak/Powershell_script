@@ -183,6 +183,8 @@ Or you can use the scripts separately
   .\firewall.ps1
   .\browser.ps1
   .\drivereset.ps1
+  .\netreset.ps1
+  .\disk_verefication.ps1
 ```
 
  License & Copyright
