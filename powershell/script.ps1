@@ -6,11 +6,10 @@ $tx= @"
 |_|  \___/  \_/\_/ \___||_|        /__/\__||_|  |_||_|    \__|
 
             Github: https://github.com/schsoak
-            v:1.0.0
+            v:1.0.1
             BY: ~#M?x
-
-            [1] Wsl             [2] Firewall rules
-            [3] Browser Install [4] Drive Reset
+    [1] Wsl             [2] Firewall rules [5] NetReset
+    [3] Browser Install [4] Drive Reset    [6] Disk Verification 
 "@
 
 Write-Host $tx
@@ -204,7 +203,7 @@ ___
 |___/|_|  \___/  \_/\_/ /__/\___||_|  
 Github: https://github.com/schsoak
 BY: ~#M?x
-
+[❤] Buy Me A Coffee: https://www.buymeacoffee.com/m100047r
 "@
 Write-Host $bs
 Start-Sleep 3 > $null
@@ -393,6 +392,90 @@ try {
 catch {
     <#Do this if a terminating exception happens#>
     Write-Host " ⚠ Haven Problem, maybe you dont start with administrator ⚠ "
-}
-    
 }}
+
+5{
+
+clear
+$netreset = @"
+ _  _       _                       _   
+| \| | ___ | |_  _ _  ___  ___ ___ | |_ 
+| .  |/ -_)|  _|| '_|/ -_)(_-// -_)|  _|
+|_|\_|\___| \__||_|  \___|/__/\___| \__|
+
+Github: https://github.com/schsoak
+BY: ~#M?x   
+
+"@
+
+Write-Host $netreset
+
+if ($true){
+
+netsh winsock reset all
+netsh int 6to4 reset all
+netsh int ipv4 reset all
+netsh int ipv6 reset all
+netsh int httpstunnel reset all
+netsh int isatap reset all
+netsh int portproxy reset all
+netsh int tcp reset all
+netsh int teredo reset all
+netsh int ip reset
+netsh interface reset all
+
+Write-Host
+Write-Host "✔ Verification completed!"
+Write-Host
+
+}else {
+    Write-Host " ⚠ Haven Problem, maybe you dont start with administrator ⚠ "
+}
+
+   
+}
+
+6{
+
+e$hd = @"
+
+___   _      _                         _   __  _            _    _            
+|   \ (_) ___| |__      __ __ ___  _ _ (_) / _|(_) __  __ _ | |_ (_) ___  _ _  
+| |) || |(_-/| / /      \ V // -_)| '_|| ||  _|| |/ _|/ _` ||  _|| |/ _ \| ' \ 
+|___/ |_|/__/|_\_\       \_/ \___||_|  |_||_|  |_|\__|\__/_| \__||_|\___/|_||_|
+Github: https://github.com/schsoak
+BY: ~#M?x   
+"@
+
+Write-Host $hd
+
+if ($tru){
+Write-Host "[*] Sfc /ScanNow 1/4"
+Start-Sleep 2 > $null
+Sfc /ScanNow
+clear
+Write-Host "[*] dism /online /cleanup-image /scanhealth 2/5"
+Start-Sleep 2 > $null
+dism /online /cleanup-image /scanhealth
+clear
+Write-Host "[*] dism /online /cleanup-image /restorehealth 3/5"
+Start-Sleep 2 > $null
+dism /online /cleanup-image /restorehealth
+clear
+Write-Host "[*] dism /online /cleanup-image /restorehealth 4/5"
+Start-Sleep 2 > $null
+dism /Online /Cleanup-Image /CheckHealth
+clear
+Write-Host "[*] Chkdsk 5/5"
+Start-Sleep 2 > $null
+chkdsk
+clear
+Write-Host "✔ Verification completed!"
+}else {
+    Write-Host
+    Write-Host " ⚠ Verification failed"
+}
+
+}
+
+}
