@@ -12,16 +12,15 @@ PowerShell Script is where you have a lot of PowerShell script, to make your lif
 |_|  \___/  \_/\_/ \___||_|        /__/\__||_|  |_||_|    \__|
 
             Github: https://github.com/schsoak
-            v:1.0.0
+            v:1.0.1
             BY: ~#M?x
-
-            [1] Wsl             [2] Firewall rules
-            [3] Browser Install [4] Drive Reset
+    [1] Wsl             [2] Firewall rules [5] NetReset
+    [3] Browser Install [4] Drive Reset    [6] Disk Verification 
 ```
 
 # Scripts
 
-At the moment we have 4 scripts each with a function, as time goes by I will be adding more scripts. 
+At the moment we have 6 scripts each with a function, as time goes by I will be adding more scripts. 
 
 The documentation:
 
@@ -125,6 +124,49 @@ The documentation:
 | Doc |  Links |
 | ------ | ------ |
 |  Drive Reset | https://github.com/suchsoak/Powershell_script/blob/main/Doc/drivereset.md
+
+# Netreset
+
+```sh
+ _  _       _                       _   
+| \| | ___ | |_  _ _  ___  ___ ___ | |_ 
+| .  |/ -_)|  _|| '_|/ -_)(_-// -_)|  _|
+|_|\_|\___| \__||_|  \___|/__/\___| \__|
+
+Github: https://github.com/schsoak
+BY: ~#M?x   
+
+```
+
+The script will reset TCP ports and other system network settings
+
+The Documentation
+
+| Doc |  Links |
+| ------ | ------ |
+|  Netreset |   https://github.com/suchsoak/Powershell_script/blob/main/Doc/netreset.md
+
+# Disk Verification
+
+Disk verification will scan for corrupted files such as the **sfc /scannow** command
+
+```sh
+___   _      _                         _   __  _            _    _            
+|   \ (_) ___| |__      __ __ ___  _ _ (_) / _|(_) __  __ _ | |_ (_) ___  _ _  
+| |) || |(_-/| / /      \ V // -_)| '_|| ||  _|| |/ _|/ _` ||  _|| |/ _ \| ' \ 
+|___/ |_|/__/|_\_\       \_/ \___||_|  |_||_|  |_|\__|\__/_| \__||_|\___/|_||_|
+Github: https://github.com/schsoak
+BY: ~#M?x   
+
+```
+
+The Documentation
+
+| Doc |  Links |
+| ------ | ------ |
+|  Disk Verification | https://github.com/suchsoak/Powershell_script/blob/main/Doc/disk%20verification.md   
+
+
 
 # Usage
 
