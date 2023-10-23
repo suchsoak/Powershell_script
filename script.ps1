@@ -1,6 +1,6 @@
 Clear-Host
-$tx= @"
- ___                                             _  _ __  _   
+$ps= @"
+___                                             _  _ __  _   
 | _ \ ___  _ __ __  ___  _ _        ___ __  _ _ (_)| '_ \| |_ 
 |  _// _ \ \ V  V // -_)| '_|      (_-// _|| '_|| || .__/|  _|
 |_|  \___/  \_/\_/ \___||_|        /__/\__||_|  |_||_|    \__|
@@ -12,7 +12,7 @@ $tx= @"
     [3] Browser Install [4] Drive Reset    [6] Disk Verification 
 "@
 
-Write-Host $tx
+Write-Host $ps
 Start-Sleep -Seconds 1 > $null
 write-Host
 $opt = Read-Host "Choose the option"
@@ -22,6 +22,7 @@ switch ($opt) {
 # Wsl script install
 
 1{
+
 Clear-Host
 $wsl= @"
 __      __ ___  _                        _  _ __  _   
@@ -101,7 +102,6 @@ if($true){
                 Write-Host
                 curl -O arch.zip https://github.com/yuk7/ArchWSL/releases/download/22.10.16.0/Arch.zip
                 .\arch.zip
-
               }else{
 
               }
@@ -129,7 +129,7 @@ if($true){
                wsl --install -d opensuse-leap-15.5
                wsl --install -d oraclelinux_9_1
                 Write-Host
-                Start-Sleep 2 > $null
+                Start-Sleep -Seconds 2 > $null
                 Clear-Host
                Write-Host "Everything Installed" -ForegroundColor Blue
                Write-Host
@@ -203,10 +203,10 @@ ___
 |___/|_|  \___/  \_/\_/ /__/\___||_|  
 Github: https://github.com/schsoak
 BY: ~#M?x
-[❤] Buy Me A Coffee: https://www.buymeacoffee.com/m100047r
+
 "@
 Write-Host $bs
-Start-Sleep 3 > $null
+Start-Sleep -Seconds 3 > $null
 
 try {
     Clear-Host
@@ -312,6 +312,7 @@ $all = @"
     BY: ~#M?x
 
 "@
+
 Write-Host $all
 
 if($False){
@@ -350,9 +351,7 @@ if($False){
 catch {
     
         Write-Host "Have Problems"    
-}
-
-}
+}}
 
 4{
     Clear-Host
@@ -388,7 +387,7 @@ try {
         Write-Host
     }
     
-}
+}  
 catch {
     <#Do this if a terminating exception happens#>
     Write-Host " ⚠ Haven Problem, maybe you dont start with administrator ⚠ "
@@ -397,81 +396,90 @@ catch {
 5{
 
 Clear-Host
+
 $netreset = @"
- _  _       _                       _   
+
+_  _       _                       _   
 | \| | ___ | |_  _ _  ___  ___ ___ | |_ 
 | .  |/ -_)|  _|| '_|/ -_)(_-// -_)|  _|
 |_|\_|\___| \__||_|  \___|/__/\___| \__|
 
 Github: https://github.com/schsoak
 BY: ~#M?x   
-
+    
 "@
-
+    
 Write-Host $netreset
 
 if ($true){
 
-netsh winsock reset all
-netsh int 6to4 reset all
-netsh int ipv4 reset all
-netsh int ipv6 reset all
-netsh int httpstunnel reset all
-netsh int isatap reset all
-netsh int portproxy reset all
-netsh int tcp reset all
-netsh int teredo reset all
-netsh int ip reset
-netsh interface reset all
-
-Write-Host
-Write-Host "✔ Verification completed!"
-Write-Host
-
-}else {
-    Write-Host " ⚠ Haven Problem, maybe you dont start with administrator ⚠ "
-}
-
-   
-}
-
+    Write-Host "Netsh"
+    Start-Sleep -Seconds 1 > $null
+    Clear-Host
+    netsh winsock reset all
+    Clear-Host
+    netsh int 6to4 reset all
+    netsh int ipv4 reset all
+    netsh int ipv6 reset all
+    netsh int httpstunnel reset all
+    netsh int isatap reset all
+    netsh int portproxy reset all
+    netsh int tcp reset all
+    netsh int teredo reset all
+    netsh int ip reset
+    netsh interface reset all
+    Clear-Host
+    Write-Host
+    Write-Host "✔ Verification completed!"
+    Write-Host
+    
+    }else {
+        Write-Host " ⚠ Haven Problem, maybe you dont start with administrator ⚠ "
+    }}
 6{
+    
+Clear-Host
 
 $hd = @"
-
-___   _      _                         _   __  _            _    _            
-|   \ (_) ___| |__      __ __ ___  _ _ (_) / _|(_) __  __ _ | |_ (_) ___  _ _  
-| |) || |(_-/| / /      \ V // -_)| '_|| ||  _|| |/ _|/ _` ||  _|| |/ _ \| ' \ 
-|___/ |_|/__/|_\_\       \_/ \___||_|  |_||_|  |_|\__|\__/_| \__||_|\___/|_||_|
-Github: https://github.com/schsoak
-BY: ~#M?x   
+    
+    ___   _      _                         _   __  _            _    _            
+    |   \ (_) ___| |__      __ __ ___  _ _ (_) / _|(_) __  __ _ | |_ (_) ___  _ _  
+    | |) || |(_-/| / /      \ V // -_)| '_|| ||  _|| |/ _|/ _` ||  _|| |/ _ \| ' \ 
+    |___/ |_|/__/|_\_\       \_/ \___||_|  |_||_|  |_|\__|\__/_| \__||_|\___/|_||_|
+    Github: https://github.com/schsoak
+    BY: ~#M?x   
 "@
+    
+    Write-Host $hd
+    
+    if ($true){
+    Write-Host "[*] Sfc /ScanNow 1/4"
+    Start-Sleep -Seconds 1 > $null
+    Sfc /ScanNow
+    Clear-Host
+    Write-Host "[*] dism /online /cleanup-image /scanhealth 2/5"
+    Start-Sleep -Seconds 1 > $null
+    dism /online /cleanup-image /scanhealth
+    Clear-Host
+    Write-Host "[*] dism /online /cleanup-image /restorehealth 3/5"
+    Start-Sleep -Seconds 1 > $null
+    dism /online /cleanup-image /restorehealth
+    Clear-Host
+    Write-Host "[*] dism /online /cleanup-image /restorehealth 4/5"
+    Start-Sleep -Seconds 1 > $null
+    dism /Online /Cleanup-Image /CheckHealth
+    Clear-Host
+    Write-Host "[*] Chkdsk 5/5"
+    Start-Sleep -Seconds 1 > $null
+    chkdsk
+    Clear-Host
+    Write-Host "✔ Verification completed!"
+    }else {
+        Write-Host
+        Write-Host " ⚠ Verification failed"
+    }
 
-Write-Host $hd
-
-if ($true){
-Write-Host "[*] Sfc /ScanNow 1/4"
-Start-Sleep 2 > $null
-Sfc /ScanNow
-Clear-Host
-Write-Host "[*] dism /online /cleanup-image /scanhealth 2/5"
-Start-Sleep 2 > $null
-dism /online /cleanup-image /scanhealth
-Clear-Host
-Write-Host "[*] dism /online /cleanup-image /restorehealth 3/5"
-Start-Sleep 2 > $null
-dism /online /cleanup-image /restorehealth
-Clear-Host
-Write-Host "[*] dism /online /cleanup-image /restorehealth 4/5"
-Start-Sleep 2 > $null
-dism /Online /Cleanup-Image /CheckHealth
-Clear-Host
-Write-Host "[*] Chkdsk 5/5"
-Start-Sleep 2 > $null
-chkdsk
-Clear-Host
-Write-Host "✔ Verification completed!"
-}else {
-    Write-Host
-    Write-Host " ⚠ Verification failed"
+catch {
+    <#Do this if a terminating exception happens#>
+    Write-Host " ⚠ Haven Problem, maybe you dont start with administrator ⚠ "
 }}}
