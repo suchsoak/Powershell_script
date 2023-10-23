@@ -396,7 +396,7 @@ catch {
 
 5{
 
-clear
+Clear-Host
 $netreset = @"
  _  _       _                       _   
 | \| | ___ | |_  _ _  ___  ___ ___ | |_ 
@@ -453,29 +453,25 @@ if ($tru){
 Write-Host "[*] Sfc /ScanNow 1/4"
 Start-Sleep 2 > $null
 Sfc /ScanNow
-clear
+Clear-Host
 Write-Host "[*] dism /online /cleanup-image /scanhealth 2/5"
 Start-Sleep 2 > $null
 dism /online /cleanup-image /scanhealth
-clear
+Clear-Host
 Write-Host "[*] dism /online /cleanup-image /restorehealth 3/5"
 Start-Sleep 2 > $null
 dism /online /cleanup-image /restorehealth
-clear
+Clear-Host
 Write-Host "[*] dism /online /cleanup-image /restorehealth 4/5"
 Start-Sleep 2 > $null
 dism /Online /Cleanup-Image /CheckHealth
-clear
+Clear-Host
 Write-Host "[*] Chkdsk 5/5"
 Start-Sleep 2 > $null
 chkdsk
-clear
+Clear-Host
 Write-Host "✔ Verification completed!"
 }else {
     Write-Host
     Write-Host " ⚠ Verification failed"
-}
-
-}
-
-}
+}}}
