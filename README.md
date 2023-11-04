@@ -205,6 +205,32 @@ The Documentation
 
 </details>
 
+<details>
+ 
+<summary>Telssh</summary>
+
+# Telssh
+
+```sh
+   |          |              |     
+    __|   _ \  |   __|   __|  __ \  
+    |     __/  | \__ \ \__ \  | | | 
+   \__| \___| _| ____/ ____/ _| |_|                                        
+    Github: https://github.com/schsoak
+    BY: ~#M?x     
+```
+
+The script verifies that OpenSSH and Telnet are installed on the Windows system and performs the installation if necessary.
+
+The Documentation
+
+| Doc |  Links |
+| ------ | ------ |
+|  Telssh | https://github.com/suchsoak/Powershell_script/blob/main/Doc/Telssh.md
+
+</details>
+
+
 # Usage
 
 You can usage the script.ps1
