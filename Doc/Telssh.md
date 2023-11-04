@@ -57,9 +57,7 @@ if ($false){
     Write-Host
     Clear-Host
     Write-Host "Telnet is already installed." -ForegroundColor Red
-}else {
-    Write-Host "Have problems with Telnet"
-}}
+}
 ```
 
 | Services |  Links |
