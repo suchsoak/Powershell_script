@@ -425,7 +425,7 @@ if ($true){
     netsh interface reset all
     Clear-Host
     Write-Host
-    Write-Host "✔ Verification completed!"
+    Write-Host "Verification completed!"
     Write-Host
 
 }else {
@@ -470,7 +470,7 @@ if ($true){
     Start-Sleep 2 > $null
     chkdsk
     Clear-Host
-    Write-Host "✔ Verification completed!"
+    Write-Host "Verification completed!"
 }else {
     Write-Host
     Write-Host " ⚠ Verification failed"
