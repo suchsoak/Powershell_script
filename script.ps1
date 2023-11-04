@@ -438,7 +438,6 @@ if ($true){
 6{
 Clear-Host
 $hd = @"
-
 ___   _      _                         _   __  _            _    _            
 |   \ (_) ___| |__      __ __ ___  _ _ (_) / _|(_) __  __ _ | |_ (_) ___  _ _  
 | |) || |(_-/| / /      \ V // -_)| '_|| ||  _|| |/ _|/ _` ||  _|| |/ _ \| ' \ 
@@ -477,7 +476,6 @@ if ($true){
 }}
 
 7{
-
     ssh = @"
 
     |          |              |     
@@ -497,7 +495,7 @@ if ($False){
     Write-Host
     Clear-Host
     Write-Host "OpenSSH is installed" -ForegroundColor Red
-    Start-Sleep 3 > $null
+    Start-Sleep 4 > $null
 }
 if ($true){
     $SSHStatus = Get-WindowsCapability -Online | ? Name -like 'OpenSSH*'
@@ -507,13 +505,17 @@ if ($true){
     Write-Host
     Clear-Host
     else {
+        Clear-Host
         Write-Host "Openssh is probably not available"
+        Start-Sleep 3 > $null
     }
 if ($false){
     $TelnetStatus = Get-WindowsCapability -Online | ? Name -like 'TelnetClient*'
 }else {
     Write-Host "Installing Telnet..."
+    Start-Sleep 3 > $null
     Add-WindowsCapability -Online -Name TelnetClient~~~~0.0.1.0
+    Start-Sleep 2 > $null
     Write-Host
     Clear-Host
     Write-Host "Telnet is already installed." -ForegroundColor Red
