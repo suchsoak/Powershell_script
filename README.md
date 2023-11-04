@@ -34,6 +34,10 @@ If you want to know more about the scripts, inside the **powershell** folder wil
 | ------ | ------ |
 |  Scripts | https://github.com/suchsoak/Powershell_script/tree/main/powershell    
 
+<details>
+ 
+<summary>WSL</summary>
+
 # WSL
 
 This script will install wsl 2 on windows plus ubuntu, debian and etc...
@@ -56,6 +60,12 @@ The documentation:
 | ------ | ------ |
 |  WSL | https://github.com/suchsoak/Powershell_script/blob/main/Doc/wsl.md  
 
+</details>
+
+<details>
+ 
+<summary>Firewall</summary>
+
 # Firewall
 
 The firewall will place rules in your windows firewall
@@ -75,6 +85,12 @@ The documentation:
 | Doc |  Links |
 | ------ | ------ |
 |  FIrewall | https://github.com/suchsoak/Powershell_script/blob/main/Doc/Firewall.md 
+
+</details>
+
+<details>
+ 
+<summary>Browser</summary>
 
 # Browser
 
@@ -105,6 +121,12 @@ The documentation:
 | ------ | ------ |
 |  Browser | https://github.com/suchsoak/Powershell_script/blob/main/Doc/Browser.md 
 
+</details>
+
+<details>
+ 
+<summary>Drive Reset</summary>
+
 # Drive Reset
 
 ```sh
@@ -124,6 +146,13 @@ The documentation:
 | Doc |  Links |
 | ------ | ------ |
 |  Drive Reset | https://github.com/suchsoak/Powershell_script/blob/main/Doc/drivereset.md
+
+</details>
+
+
+<details>
+ 
+<summary>Netreset</summary>
 
 # Netreset
 
@@ -146,6 +175,13 @@ The Documentation
 | ------ | ------ |
 |  Netreset |   https://github.com/suchsoak/Powershell_script/blob/main/Doc/netreset.md
 
+
+</details>
+
+<details>
+ 
+<summary>Dsik Verification</summary>
+
 # Disk Verification
 
 Disk verification will scan for corrupted files such as the **sfc /scannow** command
@@ -167,6 +203,7 @@ The Documentation
 |  Disk Verification | https://github.com/suchsoak/Powershell_script/blob/main/Doc/disk%20verification.md   
 
 
+</details>
 
 # Usage
 
