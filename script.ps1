@@ -6,9 +6,9 @@ $ps= @"
 |_|  \___/  \_/\_/ \___||_|        /__/\__||_|  |_||_|    \__|
 
             Github: https://github.com/schsoak
-            v:1.0.1
+            v:1.0.2
             BY: ~#M?x
-    [1] Wsl             [2] Firewall rules [5] NetReset
+    [1] Wsl             [2] Firewall rules [5] NetReset          [7] Telssh
     [3] Browser Install [4] Drive Reset    [6] Disk Verification 
 "@
 
@@ -206,7 +206,7 @@ BY: ~#M?x
 [!] Buy Me A Coffee: https://www.buymeacoffee.com/m100047r
 "@
 Write-Host $bs
-Start-Sleep 3 > $null
+Start-Sleep 5 > $null
 
 try {
     Clear-Host
@@ -425,7 +425,7 @@ if ($true){
     netsh interface reset all
     Clear-Host
     Write-Host
-    Write-Host "Verification completed!"
+    Write-Host "✔ Verification completed!"
     Write-Host
 
 }else {
@@ -470,8 +470,53 @@ if ($true){
     Start-Sleep 2 > $null
     chkdsk
     Clear-Host
-    Write-Host "Verification completed!"
+    Write-Host "✔ Verification completed!"
 }else {
     Write-Host
     Write-Host " ⚠ Verification failed"
-}}}
+}}
+
+7{
+
+    ssh = @"
+
+    |          |              |     
+    __|   _ \  |   __|   __|  __ \  
+    |     __/  | \__ \ \__ \  | | | 
+   \__| \___| _| ____/ ____/ _| |_|                                        
+    Github: https://github.com/schsoak
+    BY: ~#M?x                 
+"@
+
+if ($False){
+    $SSHStatus = Get-WindowsCapability -Online | ? Name -like 'OpenSSH*'
+}else {
+    Write-Host "Installing OpenSSH..."
+    Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+    Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
+    Write-Host
+    Clear-Host
+    Write-Host "OpenSSH is installed" -ForegroundColor Red
+    Start-Sleep 3 > $null
+}
+if ($true){
+    $SSHStatus = Get-WindowsCapability -Online | ? Name -like 'OpenSSH*'
+    Start-Service sshd
+    Set-Service -Name sshd -StartupType 'Automatic'
+    Write-Host
+    Write-Host
+    Clear-Host
+    else {
+        Write-Host "Openssh is probably not available"
+    }
+if ($false){
+    $TelnetStatus = Get-WindowsCapability -Online | ? Name -like 'TelnetClient*'
+}else {
+    Write-Host "Installing Telnet..."
+    Add-WindowsCapability -Online -Name TelnetClient~~~~0.0.1.0
+    Write-Host
+    Clear-Host
+    Write-Host "Telnet is already installed." -ForegroundColor Red
+}else {
+    Write-Host "Have problems with Telnet"
+}}}}
