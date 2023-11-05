@@ -12,7 +12,7 @@ PowerShell Script is where you have a lot of PowerShell script, to make your lif
 |_|  \___/  \_/\_/ \___||_|        /__/\__||_|  |_||_|    \__|
 
             Github: https://github.com/schsoak
-            v:1.0.1
+            v:1.0.2
             BY: ~#M?x
     [1] Wsl             [2] Firewall rules [5] NetReset          [7] Telssh
     [3] Browser Install [4] Drive Reset    [6] Disk Verification 
