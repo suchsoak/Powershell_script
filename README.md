@@ -20,7 +20,7 @@ PowerShell Script is where you have a lot of PowerShell script, to make your lif
 
 # Scripts
 
-At the moment we have 6 scripts each with a function, as time goes by I will be adding more scripts. 
+At the moment we have 7 scripts each with a function, as time goes by I will be adding more scripts. 
 
 The documentation:
 
