@@ -10,7 +10,7 @@ $ps= @"
             BY: ~#M?x
 
             [1] Wsl                     [9] IDE
-            [2] Firewall rules          [10] Systeminfo
+            [2] Firewall rules          
             [3] Browser Install         
             [4] Drive Reset    
             [5] NetReset 
