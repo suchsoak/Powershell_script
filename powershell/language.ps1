@@ -77,7 +77,7 @@ ___   ___   ___
     Write-Host $gcc
     Start-Sleep 2 > $null
     #MSYS2
-    winget install https://github.com/msys2/msys2-installer/releases/download/2023-10-26/msys2-x86_64-20231026.exe 
+    winget install --id=MSYS2.MSYS2  -e
     Write-Host
     Write-Host "msys2 is installed"
 }
@@ -94,11 +94,12 @@ ___   ___   ___
 "@ 
     Write-Host $nodejs -ForegroundColor Green
     Start-Sleep 2 > $null
-    winget install --id=OpenJS.NodeJS -v "undefined" -e
+    winget install --id=OpenJS.NodeJS  -e
     Write-Host
     Write-Host "nodejs is installed"
 }
 5{
+    Clear-Host
     $swift=@"
 
     ___ __      __ ___  ___  _____ 
@@ -117,6 +118,7 @@ Write-Host
 Write-Host "swift is installed"
 }
 6{
+    Clear-Host
     $go=@"
 
     ___   ___  
@@ -135,6 +137,7 @@ Write-Host "Go installed"
 }
 
 7{
+Clear-Host
 $kotlin=@"
 
 _  __  ___   _____  _     ___  _  _ 
@@ -161,10 +164,10 @@ _  __  ___   _____  _     ___  _  _
     winget install --id=RubyInstallerTeam.Ruby.3.2  -e
     Write-Host "GCC [3/7]"
     Start-Sleep 2 > $null
-    winget install https://github.com/msys2/msys2-installer/releases/download/2023-10-26/msys2-x86_64-20231026.exe 
+    winget install --id=MSYS2.MSYS2  -e
     Write-Host "Nodejs [4/7]" -ForegroundColor Green
     Start-Sleep 2 > $null
-    winget install --id=OpenJS.NodeJS -v "undefined" -e
+    winget install --id=OpenJS.NodeJS -e
     Write-Host "Swith [5/7]" -ForegroundColor Yellow
     Start-Sleep 2 > $null
     winget install --id=Swift.Toolchain  -e
@@ -175,9 +178,4 @@ _  __  ___   _____  _     ___  _  _
     Start-Sleep 2 > $null
     winget install --id=JetBrains.Kotlin.Complier  -e
     
-}
-
-default{
-    Write-Host
-    Write-Host "Please enter a valid number." -ForegroundColor Red
 }}
