@@ -25,13 +25,11 @@
     Clear-Host
     $python =@"
 
-    ▄▄▄▄▄▄▄ ▄▄   ▄▄ ▄▄▄▄▄▄▄ ▄▄   ▄▄ ▄▄▄▄▄▄▄ ▄▄    ▄ 
-    █       █  █ █  █       █  █ █  █       █  █  █ █
-    █    ▄  █  █▄█  █▄     ▄█  █▄█  █   ▄   █   █▄█ █
-    █   █▄█ █       █ █   █ █       █  █ █  █       █
-    █    ▄▄▄█▄     ▄█ █   █ █   ▄   █  █▄█  █  ▄    █
-    █   █     █   █   █   █ █  █ █  █       █ █ █   █
-    █▄▄▄█     █▄▄▄█   █▄▄▄█ █▄▄█ █▄▄█▄▄▄▄▄▄▄█▄█  █▄▄█
+    ___ __   __ _____  _  _   ___   _  _ 
+    | _ \\ \ / /|_   _|| || | / _ \ | \| |
+    |  _/ \   /   | |  | __ || (_) || .  |
+    |_|    |_|    |_|  |_||_| \___/ |_|\_|
+    
     
 "@
     Write-Host $python -ForegroundColor Blue
@@ -42,20 +40,18 @@
     pip -V -ForegroundColor Blue
     Write-Host
     Write-Host "Python Installed"
-
+    break
 }
 
 2{
     Clear-Host
     $ruby = @"
 
-    ▄▄▄▄▄▄    ▄▄   ▄▄ ▄▄▄▄▄▄▄ ▄▄   ▄▄ 
-    █   ▄  █ █  █ █  █  ▄    █  █ █  █
-    █  █ █ █ █  █ █  █ █▄█   █  █▄█  █
-    █   █▄▄█▄█  █▄█  █       █       █
-    █    ▄▄  █       █  ▄   ██▄     ▄█
-    █   █  █ █       █ █▄█   █ █   █  
-    █▄▄▄█  █▄█▄▄▄▄▄▄▄█▄▄▄▄▄▄▄█ █▄▄▄█  
+    ___  _   _  ___ __   __
+    | _ \| | | || _ )\ \ / /
+    |   /| |_| || _ \ \   / 
+    |_|_\ \___/ |___/  |_|  
+    
 "@
     Write-Host $ruby -ForegroundColor Red
     Start-Sleep 2 > $null
@@ -63,9 +59,9 @@
     winget install --id=RubyInstallerTeam.Ruby.3.2  -e
     Write-Host
     if ($true) {
-        
         Ruby -v
         Write-Host "Ruby Installed"
+        break
     }else {
         Write-Host "Ruby Not Installed"
         Write-Host
