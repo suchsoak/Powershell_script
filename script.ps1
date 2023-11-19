@@ -554,13 +554,11 @@ switch ($language) {
     Clear-Host
     $python =@"
 
-    ▄▄▄▄▄▄▄ ▄▄   ▄▄ ▄▄▄▄▄▄▄ ▄▄   ▄▄ ▄▄▄▄▄▄▄ ▄▄    ▄ 
-    █       █  █ █  █       █  █ █  █       █  █  █ █
-    █    ▄  █  █▄█  █▄     ▄█  █▄█  █   ▄   █   █▄█ █
-    █   █▄█ █       █ █   █ █       █  █ █  █       █
-    █    ▄▄▄█▄     ▄█ █   █ █   ▄   █  █▄█  █  ▄    █
-    █   █     █   █   █   █ █  █ █  █       █ █ █   █
-    █▄▄▄█     █▄▄▄█   █▄▄▄█ █▄▄█ █▄▄█▄▄▄▄▄▄▄█▄█  █▄▄█
+    ___ __   __ _____  _  _   ___   _  _ 
+    | _ \\ \ / /|_   _|| || | / _ \ | \| |
+    |  _/ \   /   | |  | __ || (_) || .  |
+    |_|    |_|    |_|  |_||_| \___/ |_|\_|
+    
     
 "@
     Write-Host $python -ForegroundColor Blue
@@ -571,19 +569,18 @@ switch ($language) {
     pip -V -ForegroundColor Blue
     Write-Host
     Write-Host "Python Installed"
+    break
 }
 
 2{
     Clear-Host
     $ruby = @"
 
-    ▄▄▄▄▄▄    ▄▄   ▄▄ ▄▄▄▄▄▄▄ ▄▄   ▄▄ 
-    █   ▄  █ █  █ █  █  ▄    █  █ █  █
-    █  █ █ █ █  █ █  █ █▄█   █  █▄█  █
-    █   █▄▄█▄█  █▄█  █       █       █
-    █    ▄▄  █       █  ▄   ██▄     ▄█
-    █   █  █ █       █ █▄█   █ █   █  
-    █▄▄▄█  █▄█▄▄▄▄▄▄▄█▄▄▄▄▄▄▄█ █▄▄▄█  
+    ___  _   _  ___ __   __
+    | _ \| | | || _ )\ \ / /
+    |   /| |_| || _ \ \   / 
+    |_|_\ \___/ |___/  |_|  
+    
 "@
     Write-Host $ruby -ForegroundColor Red
     Start-Sleep 2 > $null
@@ -591,9 +588,9 @@ switch ($language) {
     winget install --id=RubyInstallerTeam.Ruby.3.2  -e
     Write-Host
     if ($true) {
-        
         Ruby -v
         Write-Host "Ruby Installed"
+        break
     }else {
         Write-Host "Ruby Not Installed"
         Write-Host
@@ -604,13 +601,11 @@ switch ($language) {
 3{
 Clear-Host
 $gcc = @"
-    ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ 
-    █       █       █       █
-    █   ▄▄▄▄█       █       █
-    █  █  ▄▄█     ▄▄█     ▄▄█
-    █  █ █  █    █  █    █   
-    █  █▄▄█ █    █▄▄█    █▄▄ 
-    █▄▄▄▄▄▄▄█▄▄▄▄▄▄▄█▄▄▄▄▄▄▄█    
+___   ___   ___ 
+/ __| / __| / __|
+| (_ || (__ | (__ 
+\___| \___| \___|
+
 "@
     Write-Host $gcc
     Start-Sleep 2 > $null
@@ -623,13 +618,11 @@ $gcc = @"
 4{
     Clear-Host
     $nodejs = @"
-    ▄▄    ▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄  ▄▄▄▄▄▄▄     ▄▄▄ ▄▄▄▄▄▄▄ 
-    █  █  █ █       █      ██       █   █   █       █
-    █   █▄█ █   ▄   █  ▄    █    ▄▄▄█   █   █  ▄▄▄▄▄█
-    █       █  █ █  █ █ █   █   █▄▄▄ ▄  █   █ █▄▄▄▄▄ 
-    █  ▄    █  █▄█  █ █▄█   █    ▄▄▄█ █▄█   █▄▄▄▄▄  █
-    █ █ █   █       █       █   █▄▄▄█       █▄▄▄▄▄█ █
-    █▄█  █▄▄█▄▄▄▄▄▄▄█▄▄▄▄▄▄██▄▄▄▄▄▄▄█▄▄▄▄▄▄▄█▄▄▄▄▄▄▄█
+    _  _   ___   ___   ___     _  ___ 
+    | \| | / _ \ |   \ | __| _ | |/ __|
+    | .  || (_) || |) || _| | || |\__ \
+    |_|\_| \___/ |___/ |___| \__/ |___/
+    
     
 "@ 
     Write-Host $nodejs -ForegroundColor Green
@@ -638,18 +631,14 @@ $gcc = @"
     Write-Host
     Write-Host "nodejs is installed"
 }
-5{ if ($false) {
-   winget install --id=Swift.Toolchain  -e
-}else {
+5{
     $swift=@"
 
-    ▄▄▄▄▄▄▄ ▄     ▄ ▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ 
-    █       █ █ ▄ █ █   █       █       █
-    █  ▄▄▄▄▄█ ██ ██ █   █    ▄▄▄█▄     ▄█
-    █ █▄▄▄▄▄█       █   █   █▄▄▄  █   █  
-    █▄▄▄▄▄  █       █   █    ▄▄▄█ █   █  
-     ▄▄▄▄▄█ █   ▄   █   █   █     █   █  
-    █▄▄▄▄▄▄▄█▄▄█ █▄▄█▄▄▄█▄▄▄█     █▄▄▄█  
+    ___ __      __ ___  ___  _____ 
+    / __|\ \    / /|_ _|| __||_   _|
+    \__ \ \ \/\/ /  | | | _|   | |  
+    |___/  \_/\_/  |___||_|    |_|  
+    
     
 "@
 
@@ -659,19 +648,16 @@ Start-Sleep 2 >$null
 winget install --id=Swift.Toolchain  -e
 Write-Host
 Write-Host "swift is installed"
-}}
+}
 }}
 6{
     $go=@"
 
-    ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ 
-    █       █       █
-    █   ▄▄▄▄█   ▄   █
-    █  █  ▄▄█  █ █  █
-    █  █ █  █  █▄█  █
-    █  █▄▄█ █       █
-    █▄▄▄▄▄▄▄█▄▄▄▄▄▄▄█
-    
+    ___   ___  
+    / __| / _ \ 
+   | (_ || (_) |
+    \___| \___/ 
+   
 "@
 
 Write-Host $go -ForegroundColor Cyan
@@ -684,14 +670,10 @@ Write-Host "Go installed"
 7{
 $kotlin=@"
 
-▄▄▄   ▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄     ▄▄▄ ▄▄    ▄ 
-█   █ █ █       █       █   █   █   █  █  █ █
-█   █▄█ █   ▄   █▄     ▄█   █   █   █   █▄█ █
-█      ▄█  █ █  █ █   █ █   █   █   █       █
-█     █▄█  █▄█  █ █   █ █   █▄▄▄█   █  ▄    █
-█    ▄  █       █ █   █ █       █   █ █ █   █
-█▄▄▄█ █▄█▄▄▄▄▄▄▄█ █▄▄▄█ █▄▄▄▄▄▄▄█▄▄▄█▄█  █▄▄█
-
+_  __  ___   _____  _     ___  _  _ 
+| |/ / / _ \ |_   _|| |   |_ _|| \| |
+|   < | (_) |  | |  | |__  | | | .  |
+|_|\_\ \___/   |_|  |____||___||_|\_|
         
 "@
     
@@ -703,7 +685,7 @@ $kotlin=@"
     Write-Host "Kotlin installed"
 }
 8{
-    Write-Host "Python [1/7]" -ForegroundColor Black
+    Write-Host "Python [1/7]" -ForegroundColor Blue
     Start-Sleep 2 > $null
     winget install --id=Python.Python.3.12  -e
     Write-Host "Ruby [2/7]" -ForegroundColor Red
@@ -994,9 +976,9 @@ switch ($ide1) {
     }else {
         Write-Host "Error"
     }}
-    default{
-        Write-Host
-        Write-Host "Please enter a valid number." -ForegroundColor Red
-    }    catch{
-        Write-Host "Error"
-    }}}}
+        default{
+            Write-Host
+            Write-Host "Please enter a valid number." -ForegroundColor Red
+        }    catch{
+            Write-Host "Error"
+        }}}}
