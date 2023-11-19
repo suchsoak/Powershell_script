@@ -649,7 +649,6 @@ winget install --id=Swift.Toolchain  -e
 Write-Host
 Write-Host "swift is installed"
 }
-}}
 6{
     $go=@"
 
@@ -667,6 +666,7 @@ winget install --id=GoLang.Go  -e
 Write-Host
 Write-Host "Go installed"
 }
+
 7{
 $kotlin=@"
 
@@ -684,6 +684,7 @@ _  __  ___   _____  _     ___  _  _
     Write-Host
     Write-Host "Kotlin installed"
 }
+
 8{
     Write-Host "Python [1/7]" -ForegroundColor Blue
     Start-Sleep 2 > $null
@@ -981,4 +982,4 @@ switch ($ide1) {
             Write-Host "Please enter a valid number." -ForegroundColor Red
         }    catch{
             Write-Host "Error"
-        }}}}
+        }}}}}}
