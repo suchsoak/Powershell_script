@@ -713,7 +713,7 @@ _  __  ___   _____  _     ___  _  _
 default{
     Write-Host
     Write-Host "Please enter a valid number." -ForegroundColor Red
-}
+}}}
 9{
     Clear-Host
     $IDE = @"
@@ -976,10 +976,4 @@ switch ($ide1) {
         Write-Host "All IDE Is Installed"
     }else {
         Write-Host "Error"
-    }}
-        default{
-            Write-Host
-            Write-Host "Please enter a valid number." -ForegroundColor Red
-        }    catch{
-            Write-Host "Error"
-        }}}}}}
+    }}}}}
