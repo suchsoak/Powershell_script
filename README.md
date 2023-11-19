@@ -286,21 +286,21 @@ This script will install the ide of your choice or all ides
 You can usage the script.ps1
 
 ```sh
-   .\script.ps1
+   ./script.ps1
 ```
 
 Or you can use the scripts separately
 
 ```sh
-  .\wsl.ps1
-  .\firewall.ps1
-  .\browser.ps1
-  .\drivereset.ps1
-  .\netreset.ps1
-  .\disk_verefication.ps1
-  .\telssh.ps1
-  .\language.ps1
-  .\ide.ps1
+  ./wsl.ps1
+  ./firewall.ps1
+  ./browser.ps1
+  ./drivereset.ps1
+  ./netreset.ps1
+  ./disk_verefication.ps1
+  ./telssh.ps1
+  ./language.ps1
+  ./ide.ps1
 ```
 
  License & Copyright
