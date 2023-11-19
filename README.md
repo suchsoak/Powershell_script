@@ -283,6 +283,11 @@ This script will install the ide of your choice or all ides
 
 # Usage
 
+>[!NOTE]
+>Don't forget, from the Get-ExecutionPolicy
+>
+>Unblock-File -Path .\script.ps1
+
 You can usage the script.ps1
 
 ```sh
