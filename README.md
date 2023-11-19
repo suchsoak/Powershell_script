@@ -221,6 +221,65 @@ The Documentation
 
 </details>
 
+<details>
+ 
+<summary>Programming Language</summary>
+
+```sh
+
+         _              __ _              __ _      
+        | | __ _  _ _  / _` | _  _  __ _ / _` | ___ 
+        | |/ _` || ' \ \__. || || |/ _` |\__. |/ -_)
+        |_|\__/_||_||_||___/  \_._|\__/_||___/ \___|
+        Github: https://github.com/schsoak
+        Buy ME A Coffe: 
+        BY: ~#M?x  
+
+        [1] Python    [5] Swift
+        [2] Ruby      [6] GO
+        [3] GCC (C)   [7] Kotlin
+        [4] Nodejs    [8] ALL
+
+```
+
+This scrips will install the programming languages of your choice such as python, ruby and etc..
+
+
+The Documentation
+
+| Doc |  Links |
+| ------ | ------ |
+| language | https://github.com/suchsoak/Powershell_script/blob/main/Doc/language.md
+
+</details>
+
+<details>
+ 
+<summary>IDE</summary>
+
+```sh
+
+    ___  ___   ___ 
+    |_ _||   \ | __|
+     | | | |) || _| 
+    |___||___/ |___|
+    Buy ME A Coffe: https://www.buymeacoffee.com/m100047r
+    Github: https://github.com/schsoak
+    BY: ~#M?x
+
+    [1] Visual Code Studio          [4] Atom                 [7] Notepadd++
+    [2] PyCharm Community Edition   [5] Android Studio       [8] Rubymine
+    [3] Sublime Text                [6] Arduino IDE          [9] ALL
+
+```
+This script will install the ide of your choice or all ides
+
+| Doc |  Links |
+| ------ | ------ |
+| IDE | https://github.com/suchsoak/Powershell_script/blob/main/Doc/ide.md
+
+</details>
+
 
 # Usage
 
@@ -239,6 +298,9 @@ Or you can use the scripts separately
   .\drivereset.ps1
   .\netreset.ps1
   .\disk_verefication.ps1
+  .\telssh.ps1
+  .\language.ps1
+  .\ide.ps1
 ```
 
  License & Copyright
