@@ -311,7 +311,3 @@ Or you can use the scripts separately
  License & Copyright
 -----------------------
 This open source project is licensed under the CC0-1.0 license. All trademarks are the property of their respective owners.
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/m100047r)
-
-
