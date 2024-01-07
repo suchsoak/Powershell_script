@@ -6,17 +6,17 @@ $ps= @"
 |_|  \___/  \_/\_/ \___||_|        /__/\__||_|  |_||_|    \__|
 
             Github: https://github.com/schsoak
-            v:1.0.3
-            BY: ~#M?x
+            BY: suchsoak
+            v:1.0.4
 
-            [1] Wsl                     [9] IDE
-            [2] Firewall rules          
-            [3] Browser Install         
-            [4] Drive Reset    
-            [5] NetReset 
-            [6] Disk Verification 
-            [7] Telssh 
-            [8] Programming language
+            [1] Wsl                     [9]  IDE
+            [2] Firewall rules          [10] Systeminfo
+            [3] Browser Install         [11] File information
+            [4] Drive Reset             [12] RestorePoint
+            [5] NetReset                [13] Windows update
+            [6] Disk Verification       [14] EventLog
+            [7] Telssh                  [15] MpScan
+            [8] Programming language    [16] Password
 "@
 
 Write-Host $ps -ForegroundColor Blue
@@ -37,7 +37,7 @@ __      __ ___  _                        _  _ __  _
   \_/\_/  |___/|____|      /__/\__||_|  |_||_|    \__|
 
             Github: https://github.com/schsoak
-            BY: ~#M?x
+            BY: suchsok
 "@
 Write-Host $wsl
 Start-Sleep -Seconds 2 > $null
@@ -161,12 +161,10 @@ if($true){
          dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
          wsl --set-default-version 2
     }
-
 }
 
-# Firewall rule
 2{
-
+Clear-Host
 $fi= @"
 
  ___  ___                           _  _ 
@@ -175,7 +173,7 @@ $fi= @"
 |_|  |___||_|  \___|  \_/\_/ \__/_||_||_|
 
     Github: https://github.com/schsoak
-    BY: ~#M?x
+    BY: suchsok
 
 "@
 
@@ -194,7 +192,7 @@ if ($true){
     write-host 
     New-NetFirewallRule -DisplayName "'Block 80'" -Direction Inbound -Protocol TCP -LocalPort 80 -Action Block
     }else {
-        Write-Host "Haven Problem"
+        Write-Host "Had a problem"
         write-host "Don't forget by Administrator"
     }
 }
@@ -210,10 +208,10 @@ ___
 |___/|_|  \___/  \_/\_/ /__/\___||_|  
 [!] Buy Me A Coffee: https://www.buymeacoffee.com/m100047r
 Github: https://github.com/schsoak
-BY: ~#M?x
+BY: suchsok
 "@
 Write-Host $bs
-Start-Sleep 5 > $null
+Start-Sleep 2 > $null
 
 try {
     Clear-Host
@@ -225,10 +223,8 @@ try {
     | | | ' \ (_-/|  _|/ _` || || |
    |___||_||_|/__/ \__|\__/_||_||_|  
 
-    [*] 1. Brave   
-    [*] 2. Firefox   
-    [*] 3. Chrome  
-    [*] 4. Opera GX
+    [*] 1. Brave   [*] 2. Firefox   
+    [*] 3. Chrome  [*] 4. Opera GX
     [*] 5. All         
 "@
 Write-Host $install
@@ -274,6 +270,7 @@ switch ($opt) {
     }
     }
     3{
+    Clear-Host
     $chrom = @"
     ___  _                          
     / __|| |_   _ _  ___  _ __   ___ 
@@ -292,6 +289,7 @@ switch ($opt) {
 
     }
     4{
+        Clear-Host
         $opreagx = @"
         ___   ___  ___  ___  ___         ___ __  __
         / _ \ | _ \| __|| _ \/   \       / __|\ \/ /
@@ -307,7 +305,6 @@ switch ($opt) {
         }else {
             Write-Host "Something has gone wrong"
         }
-    
         }
     5{
 Clear-Host
@@ -317,7 +314,7 @@ $all = @"
     | _ \| '_|/ _ \ \ V  V /(_-// -_)| '_|
     |___/|_|  \___/  \_/\_/ /__/\___||_|  
     Github: https://github.com/schsoak
-    BY: ~#M?x
+    BY: suchsok
 
 "@
 Write-Host $all
@@ -348,9 +345,7 @@ if($False){
             Write-Host
             Write-Host "Something has gone wrong"
         }
-
     }
-
     Default {Write-Host "Invalid Option"}
 }
 
@@ -358,9 +353,7 @@ if($False){
 catch {
     
         Write-Host "Something has gone wrong"    
-}
-
-}
+}}
 
 4{
 Clear-Host
@@ -370,7 +363,7 @@ $drives = @"
     | |) || '_|| |\ V // -_)(_-/      |   // -_)(_-// -_)|  _|
     |___/ |_|  |_| \_/ \___|/__/      |_|_\\___|/__/\___| \__|
     Github: https://github.com/schsoak
-    BY: ~#M?x   
+    BY: suchsok   
 "@
     Write-Host $drives
 try {
@@ -391,14 +384,13 @@ try {
         Write-Host "Now reboot your computer" -ForegroundColor Cyan
     }else{
         Write-Host
-        Write-Host " ⚠ Haven Problem ⚠ "
+        Write-Host " ⚠ Had a problem ⚠ "
         Write-Host
     }
     
 }
 catch {
-    <#Do this if a terminating exception happens#>
-    Write-Host " ⚠ Haven Problem, maybe you dont start with administrator ⚠ "
+    Write-Host " ⚠ Had a problem, maybe you dont start with administrator ⚠ "
 }}
 
 5{
@@ -410,7 +402,7 @@ $netreset = @"
 |_|\_|\___| \__||_|  \___|/__/\___| \__|
 
 Github: https://github.com/schsoak
-BY: ~#M?x   
+BY: suchsok   
 
 "@
 
@@ -435,7 +427,7 @@ if ($true){
     Write-Host
     Start-Sleep 2 >$null
 }else {
-    Write-Host " ⚠ Haven Problem, maybe you dont start with administrator ⚠ "
+    Write-Host " ⚠ Had a problem, maybe you dont start with administrator ⚠ "
 }}
 
 6{
@@ -446,36 +438,39 @@ ___   _      _                         _   __  _            _    _
 | |) || |(_-/| / /      \ V // -_)| '_|| ||  _|| |/ _|/ _` ||  _|| |/ _ \| ' \ 
 |___/ |_|/__/|_\_\       \_/ \___||_|  |_||_|  |_|\__|\__/_| \__||_|\___/|_||_|
 Github: https://github.com/schsoak
-BY: ~#M?x   
+BY: suchsok   
 "@
 
 Write-Host $hd
 Write-Host
 if ($true){
-    Write-Host "[*] Sfc /ScanNow 1/4"
+    Write-Host "[*] Sfc /ScanNow 1/6" -ForegroundColor Red
     Start-Sleep 2 > $null
     Sfc /ScanNow
     Clear-Host
-    Write-Host "[*] dism /online /cleanup-image /scanhealth 2/5"
+    Write-Host "[*] dism /online /cleanup-image /scanhealth 2/6" -ForegroundColor Red
     Start-Sleep 2 > $null
     dism /online /cleanup-image /scanhealth
     Clear-Host
-    Write-Host "[*] dism /online /cleanup-image /restorehealth 3/5"
+    Write-Host "[*] dism /online /cleanup-image /restorehealth 3/6" -ForegroundColor Red
     Start-Sleep 2 > $null
     dism /online /cleanup-image /restorehealth
     Clear-Host
-    Write-Host "[*] dism /online /cleanup-image /restorehealth 4/5"
+    Write-Host "[*] dism /online /cleanup-image /CheckHealth 4/6" -ForegroundColor Red
     Start-Sleep 2 > $null
     dism /Online /Cleanup-Image /CheckHealth
     Clear-Host
-    Write-Host "[*] Chkdsk 5/5"
+    Write-Host "[*] Chkdsk 5/6" -ForegroundColor Green
     Start-Sleep 2 > $null
     chkdsk
     Clear-Host
+    Write-Host "[*] del temp files 6/6" -ForegroundColor Green
+    cd %temp%
+    del *
     Write-Host "Verification completed!"
 }else {
     Write-Host
-    Write-Host " ⚠ Verification failed"
+    Write-Host " ⚠ Verification failed ⚠"
 }}
 
 7{
@@ -487,7 +482,7 @@ if ($true){
     |     __/  | \__ \ \__ \  | | | 
    \__| \___| _| ____/ ____/ _| |_|                                        
     Github: https://github.com/schsoak
-    BY: ~#M?x                 
+    BY: suchsok                 
 "@
 
 Write-host $ssh
@@ -512,6 +507,7 @@ if ($true){
     Write-Host
     Write-Host
     Clear-Host
+    
     else {
         Clear-Host
         Write-Host "Openssh is probably not available"
@@ -525,7 +521,6 @@ if ($false){
     Add-WindowsCapability -Online -Name TelnetClient~~~~0.0.1.0
     Start-Sleep 2 > $null
     Write-Host
-    Clear-Host
     Write-Host "Telnet is already installed." -ForegroundColor Red
     Write-Host
 }}}
@@ -539,7 +534,7 @@ $programming = @"
         |_|\__/_||_||_||___/  \_._|\__/_||___/ \___|
         Github: https://github.com/schsoak
         Buy ME A Coffe: 
-        BY: ~#M?x  
+        BY: suchsok  
 
         [1] Python    [5] Swift
         [2] Ruby      [6] GO
@@ -727,7 +722,7 @@ default{
     |___||___/ |___|
     Buy ME A Coffe: https://www.buymeacoffee.com/m100047r
     Github: https://github.com/schsoak
-    BY: ~#M?x
+    BY: suchsok
 
     [1] Visual Code Studio          [4] Atom                 [7] Notepadd++
     [2] PyCharm Community Edition   [5] Android Studio       [8] Rubymine
@@ -747,7 +742,7 @@ switch ($ide1) {
        | (__ | (_) || |) || _| 
         \___| \___/ |___/ |___|
         Github: github.com/suchsoak
-        BY: ~#M?x
+        BY: suchsok
 "@
         Write-Host $visual -ForegroundColor Blue
         winget install --id=Microsoft.VisualStudioCode  -e
@@ -762,7 +757,7 @@ switch ($ide1) {
         |  _/ \   / | (__ | __ || - ||   /| |\/| |
         |_|    |_|   \___||_||_||_|_||_|_\|_|  |_|
         Github: github.com/suchsoak
-        BY: ~#M?x
+        BY: suchsok
 "@
         Write-Host $pycharm -ForegroundColor Green
         Start-Sleep 2 > $null
@@ -778,7 +773,7 @@ switch ($ide1) {
         \__ \| |_| || _ \| |__  | | | |\/| || _|         | |  | _|  >  <   | |  
         |___/ \___/ |___/|____||___||_|  |_||___|        |_|  |___|/_/\_\  |_|  
         Github: github.com/suchsoak
-        BY: ~#M?x
+        BY: suchsok
 "@
         Write-Host $sublime -ForegroundColor Yellow
         Start-Sleep 2 >$null
@@ -795,7 +790,7 @@ switch ($ide1) {
         | - ||  _|/ _ \| '  \ 
         |_|_| \__|\___/|_|_|_|
         Github: github.com/suchsoak
-        BY: ~#M?x
+        BY: suchsok
 "@
         Write-Host $Atom -ForegroundColor Green
         Start-Sleep 2 > $null
@@ -817,7 +812,7 @@ switch ($ide1) {
         |::.|:. ||::.|   ||::.. . /|::.|:. ||::.. . ||::.||::.. . / 
         `--- ---'`--- ---'`------' `--- ---'`-------'`---'`------'  
         Github: github.com/suchsoak
-        BY: ~#M?x
+        BY: suchsok
 "@
         Write-Host $android -ForegroundColor Green
         Write-Host
@@ -835,7 +830,7 @@ switch ($ide1) {
         |_|_||_|_\|___/  \___/ |___||_|\_| \___/ 
         
       Github: github.com/suchsoak
-      BY: ~#M?x
+      BY: suchsok
 
 "@   
         Write-Host $arduino -ForegroundColor Blue
@@ -851,13 +846,13 @@ switch ($ide1) {
     7{
         Clear-Host
         $notepad = @"
-        _  _   ___   _____  ___  ___  ___  ___    _| |_    _| |_  
+         _  _   ___   _____  ___  ___  ___  ___    _| |_    _| |_  
         | \| | / _ \ |_   _|| __|| _ \/   \|   \  |_   _|  |_   _| 
         | .  || (_) |  | |  | _| |  _/| - || |) |   |_|      |_|   
         |_|\_| \___/   |_|  |___||_|  |_|_||___/                   
         
     Github: github.com/suchsoak
-    BY: ~#M?x         
+    BY: suchsok         
 "@
         Write-Host $notepad -ForegroundColor Green
         Start-Sleep 2 >$null
@@ -878,7 +873,7 @@ switch ($ide1) {
         |   /| |_| || _ \ \   / | |\/| | | | | .  || _| 
         |_|_\ \___/ |___/  |_|  |_|  |_||___||_|\_||___|
         Github:github.com/suchsoak
-        BY:~#M?x
+        BY:suchsok
 "@
 
         Write-Host $rubymine -ForegroundColor Red
@@ -895,7 +890,7 @@ switch ($ide1) {
          | | | |) || _| \__ \
         |___||___/ |___||___/          
         Github:github.com/suchsoak
-        BY:~#M?x
+        BY:suchsok
 "@
         Write-Host $ides
         Write-Host
@@ -958,9 +953,346 @@ switch ($ide1) {
         Write-Host "All IDE Is Installed"
     }else {
         Write-Host "Error"
-    }}}}      default{
+    }
+}}
+
+
+}
+
+10{
+#!/bin/bash
+#bashscript 
+Clear-Host
+$bash = @"                
+
+o=====ooooooo=ooooooooooo==
+===========+===============
+=====....................+o
+===o: :=:..+===========. +o
+====..=o+.  ~+oo====oo+ ~==
+===: ~oo==+.  ~+====oo~ +o=
+===. =oo=o=+.  .====o+ .===
+=o+ ~oo=+:.  .:=oo===: :===
+oo. +=:.  .:~~:~~+oo=..====
+o+ .=+..~+==.....:==: :o===
+o+....................=o===
+oo=============+====+=o====
+o==o=ooooooo====oooo=======
+       
+Github:github.com/suchsoak
+BY: suchsok
+"@
+Start-Sleep 2 >$null
+Write-Host $bash
+Write-Host
+.\systeminfo.bat
+    
+}
+
+11{
+Clear-Host
+$locked =@"
+
++------------------------------+
+|=========+~........~+=========|
+|=======+..~:++==++:~..+=======|
+|======~ ~+==========+~ ~======|
+|=====+ ~==============~ +=====|
+|=====~ :o=============: ~o====|
+|====+. ~++++++++++++++~ .+====|
+|==+..~~~~~~~~~~~~~~~~~~~~..+==|
+|==+ ~====================~ +==|
+|==+ ~=======+~.~~+=======~ +==|
+|==+ ~======: .++. +======~ +==|
+|==+ ~======+..:~..+======~ +==|
+|==+ ~========+  :========~ +==|
+|==+ .=========~~=========~ +==|
+|===~ ~+=======++======++~ ~===|
+|====:~..................~+====|
++------------------------------+
+Github:github.com/suchsoak
+BY: suchsok
+
+"@
+Write-Host $locked -ForegroundColor Red
+$sleep = Start-Sleep 1 > $null
+$sleep
+Write-Host
+Write-Host "Example: C:example/file"
+Write-Host  
+$filePath = Read-Host "Place the path"
+
+if ($FALSE){
+    $filePath
+    Write-Host "The file is not found!" -ForegroundColor Red
+
+} default{
+    Write-Host "Please enter the file"
+}
+
+else {
+Clear-Host
+$fileInfo = Get-ChildItem -Path $filePath
+$hash = Get-FileHash -Path $filePath -Algorithm SHA256
+
+Write-Host "File name: " $fileInfo.Name
+Write-Host "Full form: " $fileInfo.FullName
+Write-Host "size: " $fileInfo.Length "bytes"
+Write-Host "Last modification: " $fileInfo.LastWriteTime
+Write-Host "Extensions: " $fileInfo.Extension
+Write-Host "Hash (SHA256): " $hash.Hash
+}
+} catch{
+    Write-Host "Error"
+}
+
+12{
+    Clear-Host
+    $res =@"
+
+     ___           _                   ___       _        _   
+    | _ \ ___  ___| |_  ___  _ _  ___ | _ \ ___ (_) _ _  | |_ 
+    |   // -_)(_-/|  _|/ _ \| '_|/ -_)|  _// _ \| || ' \ |  _|
+    |_|_\\___|/__/ \__|\___/|_|  \___||_|  \___/|_||_||_| \__|
+    Github:github.com/suchsoak
+    BY: suchsok
+
+"@
+
+Write-Host $res
+$RestorePointName = "MyRestorePoint"
+$Description = "My restore point description"
+New-ComputerRestorePoint -RestorePointType APPLICATION_INSTALL -Description $Description -RestorePointName $RestorePointName
+Get-ComputerRestorePoint -LastStatus
+
+}
+
+13{
+    Clear-Host
+    Set-Service -Name WinRM -Status Running -PassThru
+    Set-Service -Name wuauserv -StartupType Automatic
+    net start bits
+    net start wuauserv
+    net start cryptSvc
+    net start msiserver
+    SC config wuauserv start= auto 
+    SC config bits start= auto 
+    SC config cryptsvc start= auto 
+    SC config trustedinstaller start= auto
+    Get-WindowsUpdate -MicrosoftUpdate
+    Write-Host
+    $update = Read-Host "Do you want Update?(y/n)"
+
+switch ($update) {
+
+    "y"{
+        Clear-Host
+        $windows =@"
+
+        |oooooooooooooooooooooooooooo:o|
+        |oooooooooooooo:o::::::~~~~~~~:|
+        |o~:~~~~ ~   ~o~~ ~~~~~~~~~~~~o|
+        |:           :o~~~~~~~~~~~~~ ~:|
+        |:           :o~~~~~~~~~~~~~~~:|
+        |:           :o~~~~ ~ ~~~~~ ~~o|
+        |:           :o~~~~~~~~~~~~~~~o|
+        |o::::~::::::oo::o::o:oo:::oo:o|
+        |o ~ ~ ~     oo~:::::::::::::~o|
+        |:           :o~:~:~::~:~:~:~~o|
+        |: ~   ~ ~   :o::~:~:::::~::::o|
+        |o         ~ :o:~::::~:~:::~:~o|
+        |o:~~~~~~  ~ :o::~~:~::~:~:~::o|
+        |oooooooooooooo:ooo:o::::::~:~o|
+        |oooooooooooooooooooooooooooooo|
+
+"@
+        Write-Host $windows -ForegroundColor Blue
+
+        Install-WindowsUpdate -MicrosoftUpdate
+
+    }
+
+    "n"{
+        Clear-Host
+        exit
+    }
+
+} default{
+
+    Write-Host "Please enter 'y' or 'n'"
+} catch{
+    Write-Host "Error"
+}
+
+}
+
+14{
+Clear-Host
+$log =@"
+ ___                   _    _          __ _ 
+| __|__ __ ___  _ _  | |_ | |    ___ / _` |
+| _| \ V // -_)| ' \ |  _|| |__ / _ \\__. |
+|___| \_/ \___||_||_| \__||____|\___/|___/ 
+Github:github.com/suchsoak
+BY: suchsok
+
+[1] 10    [5] 50    [9]  90
+[2] 20    [6] 60    [10] 100
+[3] 30    [7] 70    [11] 1000
+[4] 40    [8] 80    [12] 10000
+"@
+
+Write-Host $log
+
+#Get-EventLog -List
+
+$get = Read-Host "Put here"
+switch ($get) {
+    1{
+        Clear-Host
+        Get-EventLog -LogName System -Newest 10
+     }
+     2{
+        Clear-Host
+        Get-EventLog -LogName System -Newest 20
+     }
+     3{
+        Clear-Host
+        Get-EventLog -LogName System -Newest 30
+     }
+     4{
+        Clear-Host
+        Get-EventLog -LogName System -Newest 40
+     }
+     5{
+        Clear-Host
+        Get-EventLog -LogName System -Newest 50
+     }
+     6{
+        Clear-Host
+        Get-EventLog -LogName System -Newest 60
+     }
+     7{
+        Clear-Host
+        Get-EventLog -LogName System -Newest 70
+     }
+     8{
+        Clear-Host
+        Get-EventLog -LogName System -Newest 80
+     }
+     9{
+        Clear-Host
+        Get-EventLog -LogName System -Newest 90
+     }
+     10{
+        Clear-Host
+        Get-EventLog -LogName System -Newest 100
+     }
+     11{
+        Clear-Host
+        Get-EventLog -LogName System -Newest 1000
+     }
+     12{
+        Clear-Host
+        Get-EventLog -LogName System -Newest 10000
+     }
+    Default { Write-Host "Invalid Option" }
+}
+
+}
+
+15{
+    Clear-Host
+    $mp = @"
+
+    __  __  _ __  ___                 
+    |  \/  || '_ \/ __| __  __ _  _ _  
+    | |\/| || .__/\__ \/ _|/ _` || ' \ 
+    |_|  |_||_|   |___/\__|\__/_||_||_|
+    Github:github.com/suchsoak
+    BY: suchsok
+"@ 
+
+Write-Host $mp
+Get-MpComputerStatus | findstr "FullScanAge"
+Get-MpComputerStatus | findstr "ComputerID"
+Get-MpComputerStatus | findstr "AntivirusEnabled"
+Get-MpComputerStatus | findstr "AMServiceEnabled"
+Get-MpComputerStatus | findstr "Get-MpComputerStatus"
+Get-MpComputerStatus | findstr "AntispywareSignatureLastUpdated"
+Get-MpComputerStatus | findstr "AntispywareEnabled"
+Get-MpComputerStatus | findstr "AMServiceEnabled "
+Get-MpComputerStatus | findstr "IoavProtectionEnabled"
+Get-MpComputerStatus | findstr "AntivirusSignatureLastUpdated"
+Get-MpComputerStatus | findstr "OnAccessProtectionEnabled"
+
+$pscan = @"
+
+___  ___   ___  ___  _  _ 
+| _ \/ __| / __|/   \| \| |
+|  _/\__ \| (__ | - || .  |
+|_|  |___/ \___||_|_||_|\_|
+
+[1] Fullscan    [2] Quickscan
+"@
+
+Write-Host $pscan
+
+$scan = Read-Host "Fullscan o QuickScan"
+
+switch ($scan) {
+    1{ 
+        try {
+            Start-MpScan -ScanType FullScan
+        } catch {
+            Write-Host "An error occurred: $($_.Exception.Message)"
+        }
+     }
+     2{
+        try {
+            Start-MpScan -ScanType QuickScan
+        } catch {
+            Write-Host "An error occurred: $($_.Exception.Message)"
+        }
+     }
+
+    Default { Write-Host "Invalid Option" }
+}   
+
+}
+
+16{
+Clear-Host
+$pass = @"
+
+ _ __                                      _ 
+| '_ \ __ _  ___ ___ _ __ __  ___  _ _  __| |
+| .__// _` |(_-/(_-/ \ V  V // _ \| '_|/ _` |
+|_|   \__/_|/__//__/  \_/\_/ \___/|_|  \__/_|
+Github:github.com/suchsoak
+BY: suchsok
+
+"@
+
+Write-Host $pass
+$password = Read-Host "Put the passsword"
+$way = Read-Host "Place the path"
+$secureString = ConvertTo-SecureString -String "$password" -AsPlainText -Force
+$secureString | ConvertFrom-SecureString | Set-Content -Path "$way"
+
+if ($secureString){
+    Write-Host "Password saved!"
+}else {
+    Write-Host "Had a Problem, verify the path!!"
+}
+}
+catch{
+    Write-Host "There was an error with the previous command. Please try again."
+}
+
+default{
         Write-Host
         Write-Host "Please enter a valid number." -ForegroundColor Red
     }catch{
-        Write-Host ""Error""
-    }}
+        Write-Host "Error"
+}}
