@@ -57,7 +57,21 @@ Overall, this script ensures that the necessary services for `Windows Update` an
     }
 
 ```
+`"y" and "n"`: These are the options presented to the user. The script expects the user to input either "y" or "n" to proceed with the corresponding action.
 
-| Script |  Links |
+`"$windows =@"" ... """`: This section defines a multi-line string variable called $windows that contains an ASCII art representation of the Windows logo. The logo will be displayed in the console using Write-Host later in the script.
+
+`Write-Host $windows -ForegroundColor Blue`: This command displays the Windows logo stored in the $windows variable using Write-Host cmdlet. The -ForegroundColor parameter is set to "Blue" to display the logo in blue color.
+
+`Install-WindowsUpdate -MicrosoftUpdate`: If the user enters "y", this command is executed. It uses the Install-WindowsUpdate cmdlet to initiate the installation of Windows updates using the Microsoft Update service.
+
+`"n" { exit }`: If the user enters "n", this section is executed. The script simply exits, terminating the execution.
+
+| Update |  Links |
 | ------ | ------ |
+|  Net start | https://answers.microsoft.com/en-us/windows/forum/all/learning-the-net-start-command/02dfe674-d1e9-4a6d-9d75-f7896a5462f6
+|  Sc config | https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sc-config
+|  Get-WindowsUpdateLog | https://learn.microsoft.com/en-us/powershell/module/windowsupdate/get-windowsupdatelog?view=windowsserver2022-ps    
 |  update.ps1 | https://github.com/suchsoak/Powershell_script/tree/main/powershell    
+
+
