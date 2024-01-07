@@ -39,5 +39,5 @@ Therefore, the script creates a new restore point with the name "MyRestorePoint"
 
 | script |  Links |
 | ------ | ------ |
-|  Restorepoint | https://github.com/suchsoak/Powershell_script/blob/main/powershell/restorepoint.ps1
+|  restorepoint.ps1 | https://github.com/suchsoak/Powershell_script/blob/main/powershell/restorepoint.ps1
 
