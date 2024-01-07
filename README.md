@@ -11,7 +11,7 @@ PowerShell Script is where you have a lot of PowerShell script, to make your lif
 
 # Scripts
 
-At the moment we have 9 scripts each with a function, as time goes by I will be adding more scripts. 
+At the moment we have 16 scripts each with a function, as time goes by I will be adding more scripts. 
 
 The documentation:
 
@@ -281,6 +281,160 @@ This script will install the ide of your choice or all ides
 </details>
 
 
+<details>
+ 
+<summary>Systeminfo</summary>
+
+```sh
+o=====ooooooo=ooooooooooo==
+===========+===============
+=====....................+o
+===o: :=:..+===========. +o
+====..=o+.  ~+oo====oo+ ~==
+===: ~oo==+.  ~+====oo~ +o=
+===. =oo=o=+.  .====o+ .===
+=o+ ~oo=+:.  .:=oo===: :===
+oo. +=:.  .:~~:~~+oo=..====
+o+ .=+..~+==.....:==: :o===
+o+....................=o===
+oo=============+====+=o====
+o==o=ooooooo====oooo=======
+       
+Github:github.com/suchsoak
+BY: suchsok
+```
+This script gives information about the system, such as video card, processor, wifi and so on.
+
+| Doc |  Links |
+| ------ | ------ |
+| Systeminfo | https://github.com/suchsoak/Powershell_script/blob/main/Doc/systeminfo.md
+
+</details>
+
+<details>
+ 
+<summary>Fileinfo</summary>
+
+```sh
++------------------------------+
+|=========+~........~+=========|
+|=======+..~:++==++:~..+=======|
+|======~ ~+==========+~ ~======|
+|=====+ ~==============~ +=====|
+|=====~ :o=============: ~o====|
+|====+. ~++++++++++++++~ .+====|
+|==+..~~~~~~~~~~~~~~~~~~~~..+==|
+|==+ ~====================~ +==|
+|==+ ~=======+~.~~+=======~ +==|
+|==+ ~======: .++. +======~ +==|
+|==+ ~======+..:~..+======~ +==|
+|==+ ~========+  :========~ +==|
+|==+ .=========~~=========~ +==|
+|===~ ~+=======++======++~ ~===|
+|====:~..................~+====|
++------------------------------+
+Github:github.com/suchsoak
+BY: suchsok
+```
+
+This script returns information about a particular file
+
+| Doc |  Links |
+| ------ | ------ |
+| Fileinfo | https://github.com/suchsoak/Powershell_script/blob/main/Doc/fileinfo.md
+
+</details>
+
+<details>
+ 
+<summary>restorepoint</summary>
+
+```sh
+    ___           _                   ___       _        _   
+    | _ \ ___  ___| |_  ___  _ _  ___ | _ \ ___ (_) _ _  | |_ 
+    |   // -_)(_-/|  _|/ _ \| '_|/ -_)|  _// _ \| || ' \ |  _|
+    |_|_\\___|/__/ \__|\___/|_|  \___||_|  \___/|_||_||_| \__|
+    Github:github.com/suchsoak
+    BY: suchsok
+
+```
+This script will make a restore point on the system
+
+| Doc |  Links |
+| ------ | ------ |
+| Restorepoint | https://github.com/suchsoak/Powershell_script/blob/main/Doc/restorepoint.md
+
+</details>
+
+<details>
+ 
+<summary>eventlog</summary>
+
+```sh
+ ___                   _    _          __ _ 
+| __|__ __ ___  _ _  | |_ | |    ___ / _` |
+| _| \ V // -_)| ' \ |  _|| |__ / _ \\__. |
+|___| \_/ \___||_||_| \__||____|\___/|___/ 
+Github:github.com/suchsoak
+BY: suchsok
+
+[1] 10    [5] 50    [9]  90
+[2] 20    [6] 60    [10] 100
+[3] 30    [7] 70    [11] 1000
+[4] 40    [8] 80    [12] 10000
+
+```
+
+The provided script is a PowerShell script that displays a log and allows the user to choose the number of recent events they want to retrieve from the System event log. 
+
+| Doc |  Links |
+| ------ | ------ |
+| Eventlog | https://github.com/suchsoak/Powershell_script/blob/main/Doc/eventlog.md
+
+</details>
+
+<details>
+
+<summary>Mpscan</summary>
+
+```sh
+    __  __  _ __  ___                 
+    |  \/  || '_ \/ __| __  __ _  _ _  
+    | |\/| || .__/\__ \/ _|/ _` || ' \ 
+    |_|  |_||_|   |___/\__|\__/_||_||_|
+    Github:github.com/suchsoak
+    BY: suchsok
+```
+
+The script in question is written in PowerShell and aims to perform checks and executions related to computer security using Windows Defender.
+
+| Doc | Link |
+|-------|------|
+|mpscan| https://github.com/suchsoak/Powershell_script/blob/main/Doc/mpscan.md?plain=1
+  
+</details>
+
+<details>
+
+<summary>Password</summary>
+
+```sh
+ _ __                                      _ 
+| '_ \ __ _  ___ ___ _ __ __  ___  _ _  __| |
+| .__// _` |(_-/(_-/ \ V  V // _ \| '_|/ _` |
+|_|   \__/_|/__//__/  \_/\_/ \___/|_|  \__/_|
+Github:github.com/suchsoak
+BY: suchsok
+```
+
+The logic of this script is to prompt the user to enter a password and a file path, and then securely save the password to a file using PowerShell commands.
+
+|scrip| link |
+|-----|------|
+|password| https://github.com/suchsoak/Powershell_script/blob/main/Doc/password.md 
+  
+</details>
+
 # Usage
 
 >[!NOTE]
@@ -306,8 +460,13 @@ Or you can use the scripts separately
   .\telssh.ps1
   .\language.ps1
   .\ide.ps1
+  .\systeminfo.bat
+  .\restorepoint.ps1
+  .\fileinfo.ps1
+  .\eventlog.ps1
+  .\password.ps1
 ```
 
  License & Copyright
 -----------------------
-This open source project is licensed under the CC0-1.0 license. All trademarks are the property of their respective owners.
+This open source project is licensed under the `CC0-1.0 license.` All trademarks are the property of their respective owners.
