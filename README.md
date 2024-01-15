@@ -368,6 +368,37 @@ This script will make a restore point on the system
 
 <details>
  
+<summary>Windows Update </summary>
+
+```sh
+        |oooooooooooooooooooooooooooo:o|
+        |oooooooooooooo:o::::::~~~~~~~:|
+        |o~:~~~~ ~   ~o~~ ~~~~~~~~~~~~o|
+        |:           :o~~~~~~~~~~~~~ ~:|
+        |:           :o~~~~~~~~~~~~~~~:|
+        |:           :o~~~~ ~ ~~~~~ ~~o|
+        |:           :o~~~~~~~~~~~~~~~o|
+        |o::::~::::::oo::o::o:oo:::oo:o|
+        |o ~ ~ ~     oo~:::::::::::::~o|
+        |:           :o~:~:~::~:~:~:~~o|
+        |: ~   ~ ~   :o::~:~:::::~::::o|
+        |o         ~ :o:~::::~:~:::~:~o|
+        |o:~~~~~~  ~ :o::~~:~::~:~:~::o|
+        |oooooooooooooo:ooo:o::::::~:~o|
+        |oooooooooooooooooooooooooooooo|
+```
+
+This script will update the Windows update if you have problem. This script will attempt to fix this.
+
+| Doc |  Links |
+| ------ | ------ |
+| Windows Update | https://github.com/suchsoak/Powershell_script/blob/main/Doc/update.md
+
+
+</details>
+
+<details>
+ 
 <summary>eventlog</summary>
 
 ```sh
