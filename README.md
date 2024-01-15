@@ -468,18 +468,20 @@ The logic of this script is to prompt the user to enter a password and a file pa
 
 # Usage
 
->[!NOTE]
+>[!IMPORTANT]
 >Don't forget, from the Get-ExecutionPolicy
 >
 >Unblock-File -Path .\script.ps1
 
-You can usage the script.ps1
+**You can usage the script.ps1**
 
 ```sh
    .\script.ps1
 ```
 
-Or you can use the scripts separately
+>[!TIP]
+>Or you can use the scripts separately
+>
 
 ```sh
   .\wsl.ps1
