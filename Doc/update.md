@@ -12,14 +12,6 @@
 
 `net start msiserver`: This command starts the Windows Installer service. The Windows Installer service is responsible for installing, modifying, and removing software on Windows systems.
 
-`SC config wuauserv start= auto`: This command uses the SC (Service Control) command to configure the Windows Update service to start automatically.
-
-`SC config bits start= auto`: This command configures the Background Intelligent Transfer Service (BITS) to start automatically.
-
-`SC config cryptsvc start= auto`: This command configures the Cryptographic Services to start automatically.
-
-`SC config trustedinstaller start= auto`: This command configures the TrustedInstaller service to start automatically. The TrustedInstaller service is responsible for installing Windows updates and managing system file permissions.
-
 `Get-WindowsUpdate -MicrosoftUpdate`: This command uses the Get-WindowsUpdate cmdlet to check for available updates using the Microsoft Update service. This cmdlet retrieves information about available updates and their installation status.
 
 Overall, this script ensures that the necessary services for `Windows Update` and system maintenance are properly configured and started. It also checks for available updates using the Microsoft Update service.
