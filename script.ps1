@@ -1071,14 +1071,16 @@ Get-ComputerRestorePoint -LastStatus
     Clear-Host
     Set-Service -Name WinRM -Status Running -PassThru
     Set-Service -Name wuauserv -StartupType Automatic
-    net start bits
+    net stop wuauserv
+    net stop bits
+    net stop cryptsvc
+    net stop trustedinstaller
+    net stop appidsvc
     net start wuauserv
-    net start cryptSvc
-    net start msiserver
-    SC config wuauserv start= auto 
-    SC config bits start= auto 
-    SC config cryptsvc start= auto 
-    SC config trustedinstaller start= auto
+    net start bits
+    net start cryptsvc
+    net stop trustedinstaller
+    net start appidsvc
     Get-WindowsUpdate -MicrosoftUpdate
     Write-Host
     $update = Read-Host "Do you want Update?(y/n)"
