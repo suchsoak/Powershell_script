@@ -1060,10 +1060,8 @@ Write-Host "Hash (SHA256): " $hash.Hash
 "@
 
 Write-Host $res
-$RestorePointName = "MyRestorePoint"
-$Description = "My restore point description"
-New-ComputerRestorePoint -RestorePointType APPLICATION_INSTALL -Description $Description -RestorePointName $RestorePointName
-Get-ComputerRestorePoint -LastStatus
+$RestorePointName = Read-Host "What is the name of your restorepoint"
+Checkpoint-Computer -Description $RestorePointName -RestorePointType MODIFY_SETTINGS
 
 }
 
