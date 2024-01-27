@@ -960,8 +960,10 @@ switch ($ide1) {
 }
 
 10{
+
 #!/bin/bash
-#bashscript 
+#bashscript
+
 Clear-Host
 $bash = @"                
 
@@ -981,6 +983,7 @@ o==o=ooooooo====oooo=======
        
 Github:github.com/suchsoak
 BY: suchsok
+
 "@
 Start-Sleep 2 >$null
 Write-Host $bash
@@ -1026,9 +1029,7 @@ if ($FALSE){
     $filePath
     Write-Host "The file is not found!" -ForegroundColor Red
 
-} default{
-    Write-Host "Please enter the file"
-}
+} 
 
 else {
 Clear-Host
@@ -1079,9 +1080,8 @@ Checkpoint-Computer -Description $RestorePointName -RestorePointType MODIFY_SETT
     net start cryptsvc
     net stop trustedinstaller
     net start appidsvc
-    Get-WindowsUpdate -MicrosoftUpdate
     Write-Host
-    $update = Read-Host "Do you want Update?(y/n)"
+    $update = Read-Host "Do you want Update? (y/n)"
 
 switch ($update) {
 
@@ -1108,8 +1108,9 @@ switch ($update) {
 "@
         Write-Host $windows -ForegroundColor Blue
 
-        Install-WindowsUpdate -MicrosoftUpdate
-
+        Install-Module PSWindowsUpdate
+        Get-WindowsUpdate
+        Install-WindowsUpdate
     }
 
     "n"{
@@ -1118,7 +1119,6 @@ switch ($update) {
     }
 
 } default{
-
     Write-Host "Please enter 'y' or 'n'"
 } catch{
     Write-Host "Error"
@@ -1237,7 +1237,7 @@ ___  ___   ___  ___  _  _
 "@
 
 Write-Host $pscan
-
+Write-Host
 $scan = Read-Host "Fullscan o QuickScan"
 
 switch ($scan) {
@@ -1275,17 +1275,22 @@ BY: suchsok
 "@
 
 Write-Host $pass
-$password = Read-Host "Put the passsword"
+
+$password = Read-Host "Put a passoword"-AsSecureString
 $way = Read-Host "Place the path"
-$secureString = ConvertTo-SecureString -String "$password" -AsPlainText -Force
-$secureString | ConvertFrom-SecureString | Set-Content -Path "$way"
+$Encrypted = ConvertFrom-SecureString -SecureString $password -Key (1..16)
+$Encrypted | Set-Content $way
+$secureString = Get-Content $way | ConvertTo-SecureString -Key (1..16)
 
 if ($secureString){
-    Write-Host "Password saved!"
+    Write-Host
+    Write-Host "Encrypt file!!!"
 }else {
+    Write-Host
     Write-Host "Had a Problem, verify the path!!"
 }
 }
+
 catch{
     Write-Host "There was an error with the previous command. Please try again."
 }
