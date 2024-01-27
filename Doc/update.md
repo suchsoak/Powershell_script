@@ -12,7 +12,7 @@
 
 `net start msiserver`: This command starts the Windows Installer service. The Windows Installer service is responsible for installing, modifying, and removing software on Windows systems.
 
-`Get-WindowsUpdate -MicrosoftUpdate`: This command uses the Get-WindowsUpdate cmdlet to check for available updates using the Microsoft Update service. This cmdlet retrieves information about available updates and their installation status.
+` Get-WindowsUpdate`: This command uses the Get-WindowsUpdate cmdlet to check for available updates using the Microsoft Update service. This cmdlet retrieves information about available updates and their installation status.
 
 Overall, this script ensures that the necessary services for `Windows Update` and system maintenance are properly configured and started. It also checks for available updates using the Microsoft Update service.
 
@@ -39,9 +39,9 @@ Overall, this script ensures that the necessary services for `Windows Update` an
 
 "@
         Write-Host $windows -ForegroundColor Blue
-
-        Install-WindowsUpdate -MicrosoftUpdate
-
+        Install-Module PSWindowsUpdate
+        Get-WindowsUpdate
+        Install-WindowsUpdate
     }
 
     "n"{
@@ -55,7 +55,7 @@ Overall, this script ensures that the necessary services for `Windows Update` an
 
 `Write-Host $windows -ForegroundColor Blue`: This command displays the Windows logo stored in the $windows variable using Write-Host cmdlet. The -ForegroundColor parameter is set to "Blue" to display the logo in blue color.
 
-`Install-WindowsUpdate -MicrosoftUpdate`: If the user enters "y", this command is executed. It uses the Install-WindowsUpdate cmdlet to initiate the installation of Windows updates using the Microsoft Update service.
+`Install-Module PSWindowsUpdate    `: If the user enters "y", this command is executed. It uses the Install-WindowsUpdate cmdlet to initiate the installation of Windows updates using the Microsoft Update service.
 
 `"n" { exit }`: If the user enters "n", this section is executed. The script simply exits, terminating the execution.
 
