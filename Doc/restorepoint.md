@@ -12,11 +12,8 @@
 This script will make a restore point on the system
 
 ```sh
-
-$RestorePointName = "MyRestorePoint"
 $RestorePointName = Read-Host "What is the name of your restorepoint"
 Checkpoint-Computer -Description $RestorePointName -RestorePointType MODIFY_SETTINGS
-
 ```
 
 The provided script creates a new restore point on the computer using PowerShell. A restore point is an instant snapshot of the operating system's state and computer files at a specific moment. It allows you to restore the system to that specific state if any issues occur in the future.
