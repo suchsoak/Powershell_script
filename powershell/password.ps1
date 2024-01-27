@@ -10,15 +10,17 @@ BY: suchsok
 
 "@
 
-Write-Host $pass
-$password = Read-Host "Put the passsword"
+$password = Read-Host "Put a passoword"-AsSecureString
 $way = Read-Host "Place the path"
-$secureString = ConvertTo-SecureString -String "$password" -AsPlainText -Force
-$secureString | ConvertFrom-SecureString | Set-Content -Path "$way"
+$Encrypted = ConvertFrom-SecureString -SecureString $password -Key (1..16)
+$Encrypted | Set-Content $way
+$secureString = Get-Content $way | ConvertTo-SecureString -Key (1..16)
 
 if ($secureString){
-    Write-Host "Password saved!"
+    Write-Host
+    Write-Host "Encrypt file!!"
 }else {
+    Write-Host
     Write-Host "Had a Problem, verify the path!!"
 }
 catch{
