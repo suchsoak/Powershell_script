@@ -49,8 +49,6 @@ curl -s ipinfo.io | findstr "org"
 @echo [!] Additional info:
 @echo.
 color 1
-systeminfo| findstr "Registered Owner"
-@echo.
 @echo [] Serial: %PROGRAMFILES(x86)%
 @echo [] Machine: %computername%
 
