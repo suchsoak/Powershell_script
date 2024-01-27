@@ -11,7 +11,6 @@
     net start cryptsvc
     net stop trustedinstaller
     net start appidsvc
-    Get-WindowsUpdate -MicrosoftUpdate
     Write-Host
     $update = Read-Host "Do you want Update?(y/n)"
 
@@ -39,9 +38,10 @@ switch ($update) {
 
 "@
         Write-Host $windows -ForegroundColor Blue
-
-        Install-WindowsUpdate -MicrosoftUpdate
-
+        
+        Install-Module PSWindowsUpdate
+        Get-WindowsUpdate
+        Install-WindowsUpdate
     }
 
     "n"{
