@@ -49,12 +49,12 @@ curl -s ipinfo.io | findstr "org"
 @echo [!] Additional info:
 @echo.
 color 1
-@echo [] Serial: %PROGRAMFILES(x86)%
-@echo [] Machine: %computername%
+@echo [*] Serial: %PROGRAMFILES%
+@echo [*] Machine: %computername%
 
-@echo [] User: %username%
-@echo [] Operating System: %OS%
-@echo [] Folder: %SYSTEMROOT&
+@echo [*] User: %username%
+@echo [*] Operating System: %OS%
+@echo [*] Folder: %SYSTEMROOT&
 timeout /t 6 > null
 @echo.
 @echo --------------------
@@ -65,9 +65,9 @@ timeout /t 6 > null
 @echo.
 wmic CPU get name
 @echo.
-@echo [] Architecture: %PROCESSOR_ARCHITECTURE%
-@echo [] Processor: %PROCESSOR_IDENTIFIER%
-@echo [] Version: %PROCESSOR_REVISION%
+@echo [*] Architecture: %PROCESSOR_ARCHITECTURE%
+@echo [*] Processor: %PROCESSOR_IDENTIFIER%
+@echo [*] Version: %PROCESSOR_REVISION%
 @echo [*] Cores: %NUMBER_OF_PROCESSORS%
 @echo.
 @echo --------------------
