@@ -1,17 +1,19 @@
 # Powershell_script
 
-PowerShell Script is where you have a lot of PowerShell script, to make your life easier
-
-> I have to thank the fleschutz for his scrips. He inspired me to do this project. so thank you.
->  https://github.com/fleschutz/PowerShell/tree/master
+PowerShell Script is where you have a lot of PowerShell script, to make your life easier.
 
 <p align="center">
   <img src="https://github.com/suchsoak/Powershell_script/blob/main/Doc/images/powershell_script.png" alt="powershell.png">
 </p>
 
+>[!NOTE]
+>I have to thank the fleschutz for his scrips. He inspired me to do this project. so thank you.
+> https://github.com/fleschutz/PowerShell/tree/master
+
+
 # Scripts
 
-At the moment we have 16 scripts each with a function, as time goes by I will be adding more scripts. 
+At the moment we have `16` scripts each with a function, as time goes by I will be adding more scripts. 
 
 The documentation:
 
@@ -19,7 +21,7 @@ The documentation:
 | ------ | ------ |
 |  Scripts | https://github.com/suchsoak/Powershell_script/tree/main/Doc    
 
-If you want to know more about the scripts, inside the **powershell** folder will contain the script file and also the other scripts separately
+If you want to know more about the scripts, inside the `powershell` folder will contain the script file and also the other scripts separately
 
 | Scripts |  Links |
 | ------ | ------ |
