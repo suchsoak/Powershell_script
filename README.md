@@ -3,7 +3,7 @@
 PowerShell Script is where you have a lot of PowerShell script, to make your life easier.
 
 <p align="center">
-  <img src="https://github.com/suchsoak/Powershell_script/blob/main/Doc/images/powershell_script.png" alt="powershell.png">
+  <img src="https://github.com/suchsoak/Powershell_script/blob/main/Doc/images/powershell-.png" alt="powershell.png">
 </p>
 
 >[!NOTE]
