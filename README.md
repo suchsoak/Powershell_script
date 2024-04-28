@@ -13,7 +13,7 @@ PowerShell Script is where you have a lot of PowerShell script, to make your lif
 
 # Scripts
 
-At the moment we have `16` scripts each with a function, as time goes by I will be adding more scripts. 
+At the moment we have `17` scripts each with a function, as time goes by I will be adding more scripts. 
 
 The documentation:
 
@@ -443,7 +443,7 @@ The script in question is written in PowerShell and aims to perform checks and e
 
 | Doc | Link |
 |-------|------|
-|mpscan| https://github.com/suchsoak/Powershell_script/blob/main/Doc/mpscan.md?plain=1
+|mpscan| https://github.com/suchsoak/Powershell_script/blob/main/Doc/mpscan.md
   
 </details>
 
@@ -466,6 +466,33 @@ The logic of this script is to prompt the user to enter a password and a file pa
 |-----|------|
 |password| https://github.com/suchsoak/Powershell_script/blob/main/Doc/password.md 
   
+</details>
+
+<details>
+
+<summary>HRCODE</summary>
+
+```sh
+     _  _  ___   ___   ___   ___   ___ 
+    | || || _ \ / __| / _ \ |   \ | __|
+    | __ ||   /| (__ | (_) || |) || _| 
+    |_||_||_|_\ \___| \___/ |___/ |___|
+    
+    [1] Curl
+    [2] QRCodeGenerator
+
+    Github:github.com/suchsoak
+    BY: suchsoak
+
+```
+#### The script is to generate an hrcode with a link you place. There are two options, you can use the curl tool or porwshell's QRCodeGenerator. Just remember that you will have to install its module to use it.
+
+|Readme and script| link |
+|-----|------|
+| HRCODE     | https://github.com/suchsoak/Powershell_script/blob/main/Doc/hrcode.md
+| script | https://github.com/suchsoak/Powershell_script/blob/main/powershell/hrcode.ps1
+| QRCodeGenerator | https://techexpert.tips/powershell/powershell-creating-qr-code-url/
+
 </details>
 
 # Usage
@@ -500,6 +527,7 @@ The logic of this script is to prompt the user to enter a password and a file pa
   .\fileinfo.ps1
   .\eventlog.ps1
   .\password.ps1
+  .\hrcode.ps1
 ```
 
  License & Copyright
