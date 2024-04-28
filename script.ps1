@@ -5,18 +5,18 @@ $ps= @"
 |  _// _ \ \ V  V // -_)| '_|      (_-// _|| '_|| || .__/|  _|
 |_|  \___/  \_/\_/ \___||_|        /__/\__||_|  |_||_|    \__|
 
-            Github: https://github.com/schsoak
-            BY: suchsoak
-            v:1.0.4
+Github: https://github.com/schsoak
+BY: suchsoak
+v:1.0.5
 
-            [1] Wsl                     [9]  IDE
-            [2] Firewall rules          [10] Systeminfo
-            [3] Browser Install         [11] File information
-            [4] Drive Reset             [12] RestorePoint
-            [5] NetReset                [13] Windows update
-            [6] Disk Verification       [14] EventLog
-            [7] Telssh                  [15] MpScan
-            [8] Programming language    [16] Password
+[1] Wsl                     [9]  IDE               [17] HR CODE
+[2] Firewall rules          [10] Systeminfo         
+[3] Browser Install         [11] File information
+[4] Drive Reset             [12] RestorePoint
+[5] NetReset                [13] Windows update
+[6] Disk Verification       [14] EventLog
+[7] Telssh                  [15] MpScan
+[8] Programming language    [16] Password
 "@
 
 Write-Host $ps -ForegroundColor Blue
@@ -26,7 +26,7 @@ $opt = Read-Host "Choose the option"
 
 switch ($opt) {
 
-# Wsl script install
+# WSL_SCRIPT
 
 1{
 Clear-Host
@@ -37,7 +37,7 @@ __      __ ___  _                        _  _ __  _
   \_/\_/  |___/|____|      /__/\__||_|  |_||_|    \__|
 
             Github: https://github.com/schsoak
-            BY: suchsok
+            BY: suchsoak
 "@
 Write-Host $wsl
 Start-Sleep -Seconds 2 > $null
@@ -162,7 +162,7 @@ if($true){
          wsl --set-default-version 2
     }
 }
-
+# FIREWALL
 2{
 Clear-Host
 $fi= @"
@@ -173,7 +173,7 @@ $fi= @"
 |_|  |___||_|  \___|  \_/\_/ \__/_||_||_|
 
     Github: https://github.com/schsoak
-    BY: suchsok
+    BY: suchsoak
 
 "@
 
@@ -197,7 +197,7 @@ if ($true){
     }
 }
 
-# Browsers
+# BROWSER
 
 3{
 Clear-Host
@@ -208,7 +208,7 @@ ___
 |___/|_|  \___/  \_/\_/ /__/\___||_|  
 [!] Buy Me A Coffee: https://www.buymeacoffee.com/m100047r
 Github: https://github.com/schsoak
-BY: suchsok
+BY: suchsoak
 "@
 Write-Host $bs
 Start-Sleep 2 > $null
@@ -314,7 +314,7 @@ $all = @"
     | _ \| '_|/ _ \ \ V  V /(_-// -_)| '_|
     |___/|_|  \___/  \_/\_/ /__/\___||_|  
     Github: https://github.com/schsoak
-    BY: suchsok
+    BY: suchsoak
 
 "@
 Write-Host $all
@@ -354,7 +354,7 @@ catch {
     
         Write-Host "Something has gone wrong"    
 }}
-
+# DRIVES_RESET
 4{
 Clear-Host
 $drives = @"
@@ -363,7 +363,7 @@ $drives = @"
     | |) || '_|| |\ V // -_)(_-/      |   // -_)(_-// -_)|  _|
     |___/ |_|  |_| \_/ \___|/__/      |_|_\\___|/__/\___| \__|
     Github: https://github.com/schsoak
-    BY: suchsok   
+    BY: suchsoak   
 "@
     Write-Host $drives
 try {
@@ -392,7 +392,7 @@ try {
 catch {
     Write-Host " ⚠ Had a problem, maybe you dont start with administrator ⚠ "
 }}
-
+# NETRESET
 5{
 Clear-Host
 $netreset = @"
@@ -402,7 +402,7 @@ $netreset = @"
 |_|\_|\___| \__||_|  \___|/__/\___| \__|
 
 Github: https://github.com/schsoak
-BY: suchsok   
+BY: suchsoak   
 
 "@
 
@@ -429,7 +429,7 @@ if ($true){
 }else {
     Write-Host " ⚠ Had a problem, maybe you dont start with administrator ⚠ "
 }}
-
+# DISK VERIFICATION
 6{
 Clear-Host
 $hd = @"
@@ -438,7 +438,7 @@ ___   _      _                         _   __  _            _    _
 | |) || |(_-/| / /      \ V // -_)| '_|| ||  _|| |/ _|/ _` ||  _|| |/ _ \| ' \ 
 |___/ |_|/__/|_\_\       \_/ \___||_|  |_||_|  |_|\__|\__/_| \__||_|\___/|_||_|
 Github: https://github.com/schsoak
-BY: suchsok   
+BY: suchsoak   
 "@
 
 Write-Host $hd
@@ -472,7 +472,7 @@ if ($true){
     Write-Host
     Write-Host " ⚠ Verification failed ⚠"
 }}
-
+# TELSSH
 7{
     Clear-Host
     $ssh = @"
@@ -482,7 +482,7 @@ if ($true){
     |     __/  | \__ \ \__ \  | | | 
    \__| \___| _| ____/ ____/ _| |_|                                        
     Github: https://github.com/schsoak
-    BY: suchsok                 
+    BY: suchsoak                 
 "@
 
 Write-host $ssh
@@ -524,7 +524,7 @@ if ($false){
     Write-Host "Telnet is already installed." -ForegroundColor Red
     Write-Host
 }}}
-
+# LANGUAGE
 8{
 Clear-Host
 $programming = @"
@@ -534,7 +534,7 @@ $programming = @"
         |_|\__/_||_||_||___/  \_._|\__/_||___/ \___|
         Github: https://github.com/schsoak
         Buy ME A Coffe: 
-        BY: suchsok  
+        BY: suchsoak  
 
         [1] Python    [5] Swift
         [2] Ruby      [6] GO
@@ -712,6 +712,7 @@ default{
     Write-Host
     Write-Host "Please enter a valid number." -ForegroundColor Red
 }}}
+# IDE
 9{
     Clear-Host
     $IDE = @"
@@ -722,7 +723,7 @@ default{
     |___||___/ |___|
     Buy ME A Coffe: https://www.buymeacoffee.com/m100047r
     Github: https://github.com/schsoak
-    BY: suchsok
+    BY: suchsoak
 
     [1] Visual Code Studio          [4] Atom                 [7] Notepadd++
     [2] PyCharm Community Edition   [5] Android Studio       [8] Rubymine
@@ -742,7 +743,7 @@ switch ($ide1) {
        | (__ | (_) || |) || _| 
         \___| \___/ |___/ |___|
         Github: github.com/suchsoak
-        BY: suchsok
+        BY: suchsoak
 "@
         Write-Host $visual -ForegroundColor Blue
         winget install --id=Microsoft.VisualStudioCode  -e
@@ -757,7 +758,7 @@ switch ($ide1) {
         |  _/ \   / | (__ | __ || - ||   /| |\/| |
         |_|    |_|   \___||_||_||_|_||_|_\|_|  |_|
         Github: github.com/suchsoak
-        BY: suchsok
+        BY: suchsoak
 "@
         Write-Host $pycharm -ForegroundColor Green
         Start-Sleep 2 > $null
@@ -773,7 +774,7 @@ switch ($ide1) {
         \__ \| |_| || _ \| |__  | | | |\/| || _|         | |  | _|  >  <   | |  
         |___/ \___/ |___/|____||___||_|  |_||___|        |_|  |___|/_/\_\  |_|  
         Github: github.com/suchsoak
-        BY: suchsok
+        BY: suchsoak
 "@
         Write-Host $sublime -ForegroundColor Yellow
         Start-Sleep 2 >$null
@@ -790,7 +791,7 @@ switch ($ide1) {
         | - ||  _|/ _ \| '  \ 
         |_|_| \__|\___/|_|_|_|
         Github: github.com/suchsoak
-        BY: suchsok
+        BY: suchsoak
 "@
         Write-Host $Atom -ForegroundColor Green
         Start-Sleep 2 > $null
@@ -812,7 +813,7 @@ switch ($ide1) {
         |::.|:. ||::.|   ||::.. . /|::.|:. ||::.. . ||::.||::.. . / 
         `--- ---'`--- ---'`------' `--- ---'`-------'`---'`------'  
         Github: github.com/suchsoak
-        BY: suchsok
+        BY: suchsoak
 "@
         Write-Host $android -ForegroundColor Green
         Write-Host
@@ -830,7 +831,7 @@ switch ($ide1) {
         |_|_||_|_\|___/  \___/ |___||_|\_| \___/ 
         
       Github: github.com/suchsoak
-      BY: suchsok
+      BY: suchsoak
 
 "@   
         Write-Host $arduino -ForegroundColor Blue
@@ -852,7 +853,7 @@ switch ($ide1) {
         |_|\_| \___/   |_|  |___||_|  |_|_||___/                   
         
     Github: github.com/suchsoak
-    BY: suchsok         
+    BY: suchsoak         
 "@
         Write-Host $notepad -ForegroundColor Green
         Start-Sleep 2 >$null
@@ -873,7 +874,7 @@ switch ($ide1) {
         |   /| |_| || _ \ \   / | |\/| | | | | .  || _| 
         |_|_\ \___/ |___/  |_|  |_|  |_||___||_|\_||___|
         Github:github.com/suchsoak
-        BY:suchsok
+        BY:suchsoak
 "@
 
         Write-Host $rubymine -ForegroundColor Red
@@ -890,7 +891,7 @@ switch ($ide1) {
          | | | |) || _| \__ \
         |___||___/ |___||___/          
         Github:github.com/suchsoak
-        BY:suchsok
+        BY:suchsoak
 "@
         Write-Host $ides
         Write-Host
@@ -958,7 +959,7 @@ switch ($ide1) {
 
 
 }
-
+# BASH_SCRIPT
 10{
 
 #!/bin/bash
@@ -982,7 +983,7 @@ oo=============+====+=o====
 o==o=ooooooo====oooo=======
        
 Github:github.com/suchsoak
-BY: suchsok
+BY: suchsoak
 
 "@
 Start-Sleep 2 >$null
@@ -991,7 +992,7 @@ Write-Host
 .\systeminfo.bat
     
 }
-
+# LOCKED
 11{
 Clear-Host
 $locked =@"
@@ -1014,7 +1015,7 @@ $locked =@"
 |====:~..................~+====|
 +------------------------------+
 Github:github.com/suchsoak
-BY: suchsok
+BY: suchsoak
 
 "@
 Write-Host $locked -ForegroundColor Red
@@ -1046,7 +1047,7 @@ Write-Host "Hash (SHA256): " $hash.Hash
 } catch{
     Write-Host "Error"
 }
-
+# RESTORE_POINT
 12{
     Clear-Host
     $res =@"
@@ -1056,7 +1057,7 @@ Write-Host "Hash (SHA256): " $hash.Hash
     |   // -_)(_-/|  _|/ _ \| '_|/ -_)|  _// _ \| || ' \ |  _|
     |_|_\\___|/__/ \__|\___/|_|  \___||_|  \___/|_||_||_| \__|
     Github:github.com/suchsoak
-    BY: suchsok
+    BY: suchsoak
 
 "@
 
@@ -1065,7 +1066,7 @@ $RestorePointName = Read-Host "What is the name of your restorepoint"
 Checkpoint-Computer -Description $RestorePointName -RestorePointType MODIFY_SETTINGS
 
 }
-
+# WINDOWS UPDATE
 13{
     Clear-Host
     Set-Service -Name WinRM -Status Running -PassThru
@@ -1125,7 +1126,7 @@ switch ($update) {
 }
 
 }
-
+# EVENTLOG
 14{
 Clear-Host
 $log =@"
@@ -1134,7 +1135,7 @@ $log =@"
 | _| \ V // -_)| ' \ |  _|| |__ / _ \\__. |
 |___| \_/ \___||_||_| \__||____|\___/|___/ 
 Github:github.com/suchsoak
-BY: suchsok
+BY: suchsoak
 
 [1] 10    [5] 50    [9]  90
 [2] 20    [6] 60    [10] 100
@@ -1200,7 +1201,7 @@ switch ($get) {
 }
 
 }
-
+# MPSCAN
 15{
     Clear-Host
     $mp = @"
@@ -1210,7 +1211,7 @@ switch ($get) {
     | |\/| || .__/\__ \/ _|/ _` || ' \ 
     |_|  |_||_|   |___/\__|\__/_||_||_|
     Github:github.com/suchsoak
-    BY: suchsok
+    BY: suchsoak
 "@ 
 
 Write-Host $mp
@@ -1260,7 +1261,7 @@ switch ($scan) {
 }   
 
 }
-
+# Password
 16{
 Clear-Host
 $pass = @"
@@ -1270,7 +1271,7 @@ $pass = @"
 | .__// _` |(_-/(_-/ \ V  V // _ \| '_|/ _` |
 |_|   \__/_|/__//__/  \_/\_/ \___/|_|  \__/_|
 Github:github.com/suchsoak
-BY: suchsok
+BY: suchsoak
 
 "@
 
@@ -1292,6 +1293,59 @@ if ($secureString){
 }
 
 catch{
+    Write-Host "There was an error with the previous command. Please try again."
+}
+# HQCODE
+17{
+    Clear-Host
+    $hrcode = @"
+     _  _  ___   ___   ___   ___   ___ 
+    | || || _ \ / __| / _ \ |   \ | __|
+    | __ ||   /| (__ | (_) || |) || _| 
+    |_||_||_|_\ \___| \___/ |___/ |___|
+    
+    [1] Curl
+    [2] QRCodeGenerator
+
+    Github:github.com/suchsoak
+    BY: suchsoak
+"@
+Write-Host
+Write-Host $hrcode -ForegroundColor Red
+Write-Host
+$opt = Read-Host "Choose the option" 
+
+switch ($opt) {
+
+    1{
+    
+    Write-Host
+    Write-Host $hrcode
+    $hrcode = Read-Host "Put the link"
+    Write-Host
+    curl qrenco.de/$hrcode
+    }2{
+
+    Install-Module -Name QRCodeGenerator -Force
+    Clear-Host
+    Write-Host
+    $link = Read-Host "Put the link"
+    $Path = Read-Host "Put the path"
+    New-QRCodeURI -URI $link -Width 15 -OutPath $path
+    }
+
+    }
+
+if ( $hrcode )
+{
+    Write-Output ""
+} else {
+    Write-Host "Please enter a link."
+}    
+
+}
+
+ catch{
     Write-Host "There was an error with the previous command. Please try again."
 }
 
