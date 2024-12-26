@@ -7,7 +7,7 @@ PowerShell Script is where you have a lot of PowerShell script, to make your lif
 </p>
 
 >[!NOTE]
->I have to thank the fleschutz for his scrips. He inspired me to do this project. so thank you.
+>I have to thank the fleschutz for his scrips. He inspired me to do this project. So thank you.
 > https://github.com/fleschutz/PowerShell/tree/master
 
 
