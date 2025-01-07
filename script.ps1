@@ -5,7 +5,7 @@ $ps= @"
 |  _// _ \ \ V  V // -_)| '_|      (_-// _|| '_|| || .__/|  _|
 |_|  \___/  \_/\_/ \___||_|        /__/\__||_|  |_||_|    \__|
 
-Github: https://github.com/schsoak
+Github: https://github.com/suchsoak
 BY: suchsoak
 v:1.0.5
 
