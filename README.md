@@ -2,10 +2,6 @@
 
 PowerShell Script is where you have a lot of PowerShell script, to make your life easier.
 
-<p align="center">
-  <img src="https://github.com/suchsoak/Powershell_script/blob/main/Doc/images/powershell-.png" alt="powershell.png">
-</p>
-
 >[!NOTE]
 >I have to thank the fleschutz for his scrips. He inspired me to do this project. So thank you.
 > https://github.com/fleschutz/PowerShell/tree/master
