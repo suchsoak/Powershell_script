@@ -482,7 +482,7 @@ The logic of this script is to prompt the user to enter a password and a file pa
     BY: suchsoak
 
 ```
-#### The script is to generate an hrcode with a link you place. There are two options, you can use the curl tool or porwshell's QRCodeGenerator. Just remember that you will have to install its module to use it.
+#### The script is to generate an QRCODE with a link you place. There are two options, you can use the curl tool or porwshell's QRCodeGenerator. Just remember that you will have to install its module to use it.
 
 |Readme and script| link |
 |-----|------|
