@@ -466,13 +466,14 @@ The logic of this script is to prompt the user to enter a password and a file pa
 
 <details>
 
-<summary>HRCODE</summary>
+<summary>QRCODE</summary>
 
 ```sh
-     _  _  ___   ___   ___   ___   ___ 
-    | || || _ \ / __| / _ \ |   \ | __|
-    | __ ||   /| (__ | (_) || |) || _| 
-    |_||_||_|_\ \___| \___/ |___/ |___|
+  ___  ____   ____ ___  ____  _____ 
+ / _ \|  _ \ / ___/ _ \|  _ \| ____|
+| | | | |_) | |  | | | | | | |  _|  
+| |_| |  _ <| |__| |_| | |_| | |___ 
+ \__\_\_| \_\\____\___/|____/|_____|
     
     [1] Curl
     [2] QRCodeGenerator
