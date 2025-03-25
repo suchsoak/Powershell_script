@@ -1,9 +1,10 @@
  Clear-Host
-    $hrcode = @"
-     _  _  ___   ___   ___   ___   ___ 
-    | || || _ \ / __| / _ \ |   \ | __|
-    | __ ||   /| (__ | (_) || |) || _| 
-    |_||_||_|_\ \___| \___/ |___/ |___|
+    $qrcode = @"
+  ___  ____   ____ ___  ____  _____ 
+ / _ \|  _ \ / ___/ _ \|  _ \| ____|
+| | | | |_) | |  | | | | | | |  _|  
+| |_| |  _ <| |__| |_| | |_| | |___ 
+ \__\_\_| \_\\____\___/|____/|_____|
     
     [1] Curl
     [2] QRCodeGenerator
@@ -12,7 +13,7 @@
     BY: suchsoak
 "@
 Write-Host
-Write-Host $hrcode -ForegroundColor Red
+Write-Host $qrcode -ForegroundColor Red
 Write-Host
 $opt = Read-Host "Choose the option" 
 
@@ -21,10 +22,10 @@ switch ($opt) {
     1{
     
     Write-Host
-    Write-Host $hrcode
-    $hrcode = Read-Host "Put the link"
+    Write-Host $qrcode
+    $qrcode = Read-Host "Put the link"
     Write-Host
-    curl qrenco.de/$hrcode
+    curl qrenco.de/$qrcode
     }2{
 
     Install-Module -Name QRCodeGenerator -Force
@@ -37,7 +38,7 @@ switch ($opt) {
 
     }
 
-if ( $hrcode )
+if ( $qrcode )
 {
     Write-Output ""
 } else {
