@@ -486,8 +486,8 @@ The logic of this script is to prompt the user to enter a password and a file pa
 
 |Readme and script| link |
 |-----|------|
-| QRCODE     | https://github.com/suchsoak/Powershell_script/blob/main/Doc/hrcode.md
-| script | https://github.com/suchsoak/Powershell_script/blob/main/powershell/hrcode.ps1
+| QRCODE     | https://github.com/suchsoak/Powershell_script/blob/main/Doc/qrcode.md
+| script | https://github.com/suchsoak/Powershell_script/blob/main/powershell/qrcode.ps1
 | QRCodeGenerator | https://techexpert.tips/powershell/powershell-creating-qr-code-url/
 
 </details>
