@@ -495,9 +495,9 @@ The logic of this script is to prompt the user to enter a password and a file pa
 # Usage
 
 >[!IMPORTANT]
->Don't forget, from the Get-ExecutionPolicy
+>Don't forget, from the `Get-ExecutionPolicy`
 >
->Unblock-File -Path .\script.ps1
+>`Unblock-File -Path .\script.ps1`
 
 **You can usage the script.ps1**
 
