@@ -9,14 +9,18 @@ Github: https://github.com/suchsoak
 BY: suchsoak
 v:1.0.5
 
-[1] Wsl                     [9]  IDE               [17] HR CODE
-[2] Firewall rules          [10] Systeminfo         
-[3] Browser Install         [11] File information
-[4] Drive Reset             [12] RestorePoint
-[5] NetReset                [13] Windows update
-[6] Disk Verification       [14] EventLog
-[7] Telssh                  [15] MpScan
-[8] Programming language    [16] Password
+| Option | Description            | Option | Description         |
+|--------|------------------------|--------|---------------------|
+| [1]    | WSL                    | [9]    | IDE                 |
+| [2]    | Firewall rules         | [10]   | System Info         |
+| [3]    | Browser Install        | [11]   | File Information    |
+| [4]    | Drive Reset            | [12]   | Restore Point       |
+| [5]    | Net Reset              | [13]   | Windows Update      |
+| [6]    | Disk Verification      | [14]   | Event Log           |
+| [7]    | Telssh                 | [15]   | MpScan              |
+| [8]    | Programming Language   | [16]   | Password            |
+|        |                        | [17]   | HR CODE             |
+
 "@
 
 Write-Host $ps -ForegroundColor Blue
