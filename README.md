@@ -510,21 +510,21 @@ The logic of this script is to prompt the user to enter a password and a file pa
 >
 
 ```sh
-  .\wsl.ps1
-  .\firewall.ps1
-  .\browser.ps1
-  .\drivereset.ps1
-  .\netreset.ps1
-  .\disk_verefication.ps1
-  .\telssh.ps1
-  .\language.ps1
-  .\ide.ps1
-  .\systeminfo.bat
-  .\restorepoint.ps1
-  .\fileinfo.ps1
-  .\eventlog.ps1
-  .\password.ps1
-  .\hrcode.ps1
+.\wsl.ps1             # Manage WSL (Windows Subsystem for Linux)
+.\firewall.ps1        # Configure firewall rules
+.\browser.ps1         # Install or manage browsers
+.\drivereset.ps1      # Reset drives
+.\netreset.ps1        # Reset network settings
+.\disk_verefication.ps1 # Verify disk integrity
+.\telssh.ps1          # Telnet/SSH utilities
+.\language.ps1        # Programming language setup
+.\ide.ps1             # Launch or configure IDE
+.\systeminfo.bat      # Display system information
+.\restorepoint.ps1    # Create or manage restore points
+.\fileinfo.ps1        # Get file information
+.\eventlog.ps1        # View event logs
+.\password.ps1        # Password management
+.\qrcode.ps1          # Generate QR codes (HR CODE)
 ```
 
  License & Copyright
