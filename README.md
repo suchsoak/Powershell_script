@@ -524,7 +524,7 @@ The logic of this script is to prompt the user to enter a password and a file pa
 .\fileinfo.ps1        # Get file information
 .\eventlog.ps1        # View event logs
 .\password.ps1        # Password management
-.\qrcode.ps1          # Generate QR codes (HR CODE)
+.\qrcode.ps1          # Generate QR codes
 ```
 
  License & Copyright
