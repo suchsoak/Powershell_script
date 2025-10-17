@@ -7,7 +7,7 @@ PowerShell Script is where you have a lot of PowerShell script, to make your lif
 > https://github.com/fleschutz/PowerShell/tree/master
 
 <p align="center">
-<img src="https://github.com/suchsoak/Powershell_script/blob/main/GIF/1016.gif" alt="Powershell.gif">
+<img src="https://github.com/suchsoak/Powershell_script/blob/main/GIF/powershell.gif" alt="Powershell.gif">
 </p>
 
 # Scripts
