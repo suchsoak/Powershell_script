@@ -6,6 +6,9 @@ PowerShell Script is where you have a lot of PowerShell script, to make your lif
 >I have to thank the fleschutz for his scrips. He inspired me to do this project. So thank you.
 > https://github.com/fleschutz/PowerShell/tree/master
 
+<p align="center">
+<img src="https://github.com/suchsoak/Powershell_script/blob/main/GIF/1016.gif" alt="Powershell.gif">
+</p>
 
 # Scripts
 
